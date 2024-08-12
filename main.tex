@@ -87,14 +87,41 @@ Na seção Referências devem ser listadas em ordem alfabética \cite{pandorfi}.
 \subsection{Aplicações do GCD em Computação}
 % Descrição das aplicações práticas do GCD em computação, como em criptografia (ex.: RSA), compressão de dados e sistemas de controle. Discutir porque o GCD é uma operação relevante em hardware.
 
+
 \section{Desenho de Arquitetura}
 % Nesta seção, descreva a arquitetura utilizada para a implementação do GCD em hardware. Inclua uma visão geral dos módulos e suas interações.
+Esta seção descreve a arquitetura do sistema, incluindo a partição em módulos de controle e datapath, e os diagramas de blocos que ilustram a interação entre os componentes.
 
 \subsection{Partição em Módulos}
-% Detalhamento da divisão do projeto em módulos de Control e Datapath. Explicar o papel de cada módulo no sistema e como eles se comunicam. Pode incluir um diagrama de blocos para ilustrar.
+% Detalhamento da divisão do projeto em módulos de Control e Datapath. 
+% Explicar o papel de cada módulo no sistema e como eles se comunicam. 
+% Pode incluir um diagrama de blocos para ilustrar.
+A arquitetura do sistema GCD foi dividida em dois módulos principais: Control e Datapath.
+Esta divisão permite uma clara separação de responsabilidades, permite 
+uma maior modularidade, 
+facilita a implementação, manutenção e expansão do sistema.
+
+\subsubsection{Módulo de Controle}
+O módulo de controle gerencia o fluxo de dados e 
+as transições entre os estados do sistema. 
+
+\subsubsection{Módulo Datapath}
+O Datapath é responsável pelas operações aritméticas, 
+como a subtração e a comparação dos valores de entrada.
 
 \subsection{Diagramas de Blocos}
 % Apresentar diagramas de blocos que representem a arquitetura do GCD, mostrando como os diferentes componentes se conectam e interagem. Explicar o fluxo de dados entre os módulos.
+A figura a seguir ilustra a arquitetura top-level do sistema GCD,
+mostrando todos as inputs e outputs como se fossem um único bloco.
+
+\begin{figure}[ht]
+\begin{center} 
+\label{fig:top_level}
+\caption{Diagrama de Blocos do Sistema GCD}
+\includegraphics[width=10cm,angle=0]{imgs/diagram_block_top_level.png}
+\textbf{Fonte:} Elaborado pelos autores.
+\end{center}
+\end{figure}
 
 \section{Desenvolvimento e Implementação}
 

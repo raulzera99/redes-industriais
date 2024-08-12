@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex main"] 1723421802 "main.aux" "main.bbl" "main" 1723421804 0
+["bibtex main"] 1723483570 "main.aux" "main.bbl" "main" 1723483572 0
   "./bibliografia.bib" 1723035554 1594 189b4aa07d017602a11ed9492f31c190 ""
   "C:/Users/raulp/AppData/Local/Programs/MiKTeX/bibtex/bib/abntex2/abntex2-options.bib" 1543103229 5396 4eb260dac60f150ae608d45252853090 ""
   "C:/Users/raulp/AppData/Local/Programs/MiKTeX/bibtex/bst/abntex2/abntex2-alf.bst" 1543103230 60064 0819ac8568f9a482510a46e3a8a6f605 ""
-  "main.aux" 1723421803 4024 fffcb0a156c717ad115cae7e09e25a15 "pdflatex"
+  "main.aux" 1723483571 4432 407612f71d9c4442d95c017bd4b5ce04 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1723421802 "c:/Users/raulp/OneDrive - ifsp.edu.br/FACUL/Latex/GCD/main.tex" "main.pdf" "main" 1723421804 0
-  "C:/Users/raulp/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1723035653 82864 33af9636ee278c30beabba717010dc8f ""
+["pdflatex"] 1723483570 "c:/Users/raulp/OneDrive - ifsp.edu.br/FACUL/Latex/GCD/main.tex" "main.pdf" "main" 1723483572 0
+  "C:/Users/raulp/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1723483450 82864 33af9636ee278c30beabba717010dc8f ""
   "C:/Users/raulp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1095.pk" 1723035665 28976 0dbd75d0aeb98042196a6aff1be09e91 ""
   "C:/Users/raulp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1723035667 31952 f6d716be796126ce834922ffbc79deca ""
   "C:/Users/raulp/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1095.pk" 1723035663 26228 03126598a92c6ed1380380a60990e60a ""
@@ -100,13 +100,14 @@
   "C:/Users/raulp/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1686255640 4545 9f5ea23ab1c91476c42749893f790666 ""
   "C:/Users/raulp/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/raulp/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "c:/Users/raulp/OneDrive - ifsp.edu.br/FACUL/Latex/GCD/main.tex" 1723421799 12399 1bd68dad612a781d0f5dc493dcd6381d ""
+  "c:/Users/raulp/OneDrive - ifsp.edu.br/FACUL/Latex/GCD/main.tex" 1723483567 13505 6896e8172b6f4130f8a03addd25e30fc ""
   "cabecalho.tex" 1723418562 3515 09f10e4eef07e9199c315a7a1e180e2f ""
+  "imgs/diagram_block_top_level.png" 1723483183 31341 a59a63810e5c63e92be0e3756c115c65 ""
   "imgs/logo_ifsp.png" 1723035554 4070 64c56fc9e5b78266e59be2ea043940ad ""
-  "main.aux" 1723421803 4024 fffcb0a156c717ad115cae7e09e25a15 "pdflatex"
-  "main.bbl" 1723421802 1501 86745073237596b86638f3f57bb17556 "bibtex main"
-  "main.tex" 1723421799 12399 1bd68dad612a781d0f5dc493dcd6381d ""
-  "main.toc" 1723421803 1927 f92cec412822b86c15c637739ef61e4b "pdflatex"
+  "main.aux" 1723483571 4432 407612f71d9c4442d95c017bd4b5ce04 "pdflatex"
+  "main.bbl" 1723483570 1501 86745073237596b86638f3f57bb17556 "bibtex main"
+  "main.tex" 1723483567 13505 6896e8172b6f4130f8a03addd25e30fc ""
+  "main.toc" 1723483571 2076 84885131a0ece25f0d4082be58c7e39e "pdflatex"
   "preambulo.tex" 1723418191 1617 f5421a0941cc375ea62777ec6abffafc ""
   (generated)
   "main.aux"
