@@ -1,140 +1,140 @@
-PWD c:\Users\raulp\OneDrive - ifsp.edu.br\FACUL\Latex\GCD
-INPUT C:\Users\raulp\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\raulp\OneDrive - ifsp.edu.br\FACUL\Latex\GCD\main.tex
+PWD c:\Users\Leonardo\Documents\GitHub\greatest-common-divisor-hardware
+INPUT C:\Users\Leonardo\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\Users\Leonardo\Documents\GitHub\greatest-common-divisor-hardware\main.tex
 OUTPUT main.log
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\base\size11.clo
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\base\size11.clo
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\base\size11.clo
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size11.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size11.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size11.clo
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT .\preambulo.tex
 INPUT .\preambulo.tex
 INPUT .\preambulo.tex
 INPUT .\preambulo.tex
 INPUT preambulo.tex
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\generic\babel\txtbabel.def
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\babel-portuges\brazil.ldf
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\babel-portuges\brazil.ldf
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\babel-portuges\brazil.ldf
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1095.tfm
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\tools\enumerate.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\tools\enumerate.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\abntex2\abntex2cite.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\abntex2\abntex2cite.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\abntex2\abntex2abrev.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\abntex2\abntex2abrev.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifpdf.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifpdf.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifxetex.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifxetex.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\relsize\relsize.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\relsize\relsize.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\relsize\relsize.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\comment\comment.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\comment\comment.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\tools\multicol.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\tools\multicol.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amstext.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amstext.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\amscls\amsthm.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\amscls\amsthm.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\doublestroke\dsfont.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\doublestroke\dsfont.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mathtools.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mathtools.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mhsetup.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\mathtools\mhsetup.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\blindtext\blindtext.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\blindtext\blindtext.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\tools\xspace.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\tools\xspace.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\sectsty\sectsty.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\sectsty\sectsty.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\titlecaps\titlecaps.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\titlecaps\titlecaps.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\ifnextok\ifnextok.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\ifnextok\ifnextok.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\babel.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\babel.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\txtbabel.def
+INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazil.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazil.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazil.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecrm1095.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\enumerate.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\enumerate.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\abntex2\abntex2cite.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\abntex2\abntex2cite.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\calc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\calc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\abntex2\abntex2abrev.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\abntex2\abntex2abrev.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\url\url.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\url\url.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifpdf.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifpdf.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifxetex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifxetex.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\relsize\relsize.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\relsize\relsize.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\relsize\relsize.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Program Files\MiKTeX\tex\latex\comment\comment.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\comment\comment.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\multirow\multirow.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\multirow\multirow.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\indentfirst.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\indentfirst.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amscls\amsthm.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amscls\amsthm.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\doublestroke\dsfont.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\doublestroke\dsfont.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\mathtools\mathtools.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\mathtools\mathtools.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\mathtools\mhsetup.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\mathtools\mhsetup.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\blindtext\blindtext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\blindtext\blindtext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\xspace.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\xspace.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\sectsty\sectsty.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\sectsty\sectsty.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\titlecaps\titlecaps.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\titlecaps\titlecaps.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\ifnextok\ifnextok.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\ifnextok\ifnextok.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT .\main.aux
 INPUT .\main.aux
 INPUT main.aux
 OUTPUT main.aux
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT .\cabecalho.tex
 INPUT .\cabecalho.tex
 INPUT .\cabecalho.tex
@@ -188,7 +188,7 @@ INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt109
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl
-INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1095.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecti1095.tfm
 INPUT main.aux
 INPUT C:\Users\raulp\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
 INPUT C:\Users\raulp\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
