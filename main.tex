@@ -56,36 +56,71 @@ and the system simulation and validation.
 
 \section{Introdução}
 
-O Greatest Common Divisor (GCD) é um problema clássico da teoria dos números, 
-com aplicações em diversas áreas da computação. 
-Este trabalho baseia-se nas notas de aula da disciplina CSE 141L: 
-Introduction to Computer Architecture Lab, 
-ministrada na Universidade da Califórnia. 
-O objetivo é desenvolver uma implementação eficiente do GCD 
-utilizando linguagem de descrição de hardware.
+O \textit{Greatest Common Divisor} (GCD), ou Máximo Divisor Comum (MDC), é um conceito fundamental na teoria dos números. Sua importância se manifesta em diversas áreas da computação, onde desempenha um papel crucial em algoritmos essenciais. Entre essas aplicações, destacam-se os sistemas de criptografia, onde o GCD é utilizado para garantir a segurança das comunicações, e os algoritmos de compressão de dados, onde contribui para a otimização do armazenamento e transmissão de informações.
 
-O cálculo do GCD é frequentemente utilizado em algoritmos de criptografia, 
-compressão de dados e outros campos onde operações matemáticas eficientes 
-são essenciais. 
-Este projeto visa criar um design em hardware que maximize a 
-eficiência dessas operações.
+Além disso, o GCD é amplamente empregado em sistemas de controle em hardware, onde sua implementação é importante para o funcionamento de dispositivos embarcados e sistemas de tempo real. A capacidade do GCD de simplificar operações e reduzir a complexidade dos cálculos faz dele um componente indispensável na construção de circuitos digitais robustos e eficientes. Por isso, o entendimento profundo desse conceito e sua aplicação prática são de extrema relevância para engenheiros e cientistas da computação.
 
-As referências devem estar citadas no trabalho conforme a sua forma de citação, 
-como por exemplo \cite{alves}, \cite{galvani} e \cite{national_instruments} 
-ou em Pandorfi, et al, (2007). 
-Na seção Referências devem ser listadas em ordem alfabética \cite{pandorfi}.
+Este estudo busca explorar não apenas a teoria por trás do GCD, mas também sua aplicação prática por meio de implementações computacionais. A pesquisa foca no desenvolvimento de simulações em software, abordando desde a modelagem até a implementação.
 
 \section{Fundamentação Teórica}
 % Esta seção deve apresentar os conceitos teóricos fundamentais para o entendimento do GCD e sua relevância em computação. Aborde os princípios matemáticos e as aplicações típicas do GCD.
 
 \subsection{Conceitos Básicos de GCD}
-% Definição do Greatest Common Divisor (GCD) e explicação da importância deste conceito na teoria dos números. Mencionar brevemente como o GCD é utilizado na simplificação de frações, criptografia, e outras áreas da matemática aplicada.
+O conceito de Greatest Common Divisor (GCD), ou Máximo Divisor Comum (MDC) em português, é fundamental na teoria dos números e tem ampla aplicação em diversas áreas da matemática e da ciência da computação. O GCD de dois números inteiros é o maior número inteiro que divide ambos sem deixar resto. Esse conceito é importante não apenas na simplificação de frações, onde o GCD é utilizado para reduzir frações ao seu menor termo, mas também em áreas mais avançadas, como criptografia, teoria de algoritmos e circuitos digitais.
+
+Na criptografia, por exemplo, o GCD desempenha um papel crítico em algoritmos de chave pública, como o RSA, onde o conceito de coprimosidade (números cujo GCD é 1) é utilizado para garantir a segurança do sistema. Em algoritmos, o GCD é frequentemente utilizado para otimizar cálculos que envolvem divisões e reduções, sendo a base de algoritmos clássicos como o Algoritmo de Euclides, que é amplamente utilizado por sua eficiência na computação do GCD.
+
+No contexto de circuitos digitais, especificamente em módulos de controle e datapath, como os discutidos nos materiais analisados, o GCD pode ser implementado de forma eficiente através de circuitos que utilizam registradores, multiplexadores e unidades aritméticas. Esses componentes são coordenados por um módulo de controle que decide a sequência de operações, como subtrações e trocas de valores, até que o GCD seja obtido. A implementação eficiente desses circuitos é crucial para o desempenho de sistemas que exigem cálculos frequentes de GCD, especialmente em aplicações embarcadas e de tempo real.
+
+Em resumo, o GCD não é apenas um conceito básico da matemática, mas também um elemento essencial em várias aplicações práticas, desde a simplificação de frações até sistemas complexos de criptografia e arquiteturas de hardware digital
 
 \subsection{Algoritmo de Euclides}
-% Explicação do Algoritmo de Euclides, um dos métodos mais eficientes para calcular o GCD. Detalhar o funcionamento do algoritmo e discutir sua complexidade computacional. 
+O Algoritmo de Euclides é um dos métodos mais antigos e eficientes para calcular o Greatest Common Divisor (GCD), ou Máximo Divisor Comum (MDC), de dois números inteiros. Esse algoritmo, atribuído ao matemático grego Euclides, tem uma fundamentação simples e robusta, baseada na observação de que o GCD de dois números não muda se o maior dos dois números é substituído pela diferença entre eles. Essa propriedade permite a construção de um algoritmo iterativo que reduz progressivamente o problema até que o divisor comum seja encontrado.
+
+O Algoritmo de Euclides funciona através de uma série de divisões sucessivas. Dado dois números inteiros \( A \) e \( B \), onde \( A \geq B \), o algoritmo segue os seguintes passos:
+
+\begin{enumerate}
+    \item \textbf{Divisão}: Divida \( A \) por \( B \) e obtenha o quociente \( q \) e o resto \( r \) tal que \( A = Bq + r \).
+    \item \textbf{Substituição}: Substitua \( A \) por \( B \) e \( B \) por \( r \).
+    \item \textbf{Repetição}: Repita os passos acima até que \( r \) seja igual a zero. Quando isso acontecer, o GCD é o valor de \( B \) naquele ponto.
+\end{enumerate}
+
+Matematicamente, isso pode ser representado como:
+
+\[
+\text{GCD}(A, B) = \text{GCD}(B, A \mod B)
+\]
+
+Quando \( B \) se torna zero, \( A \) contém o GCD dos dois números iniciais.
+
+Considere a aplicação do algoritmo para encontrar o GCD de 48 e 18:
+
+\begin{itemize}
+    \item \( 48 \div 18 = 2 \) com resto 12 (\( 48 = 18 \times 2 + 12 \)).
+    \item Substitua \( A = 18 \) e \( B = 12 \).
+    \item \( 18 \div 12 = 1 \) com resto 6 (\( 18 = 12 \times 1 + 6 \)).
+    \item Substitua \( A = 12 \) e \( B = 6 \).
+    \item \( 12 \div 6 = 2 \) com resto 0 (\( 12 = 6 \times 2 + 0 \)).
+\end{itemize}
+
+Como o resto é zero, o GCD é 6.
+
+O Algoritmo de Euclides é conhecido por sua eficiência. A cada iteração, o tamanho dos números envolvidos é reduzido, e em média, o número de iterações necessárias é proporcional ao logaritmo do menor número entre os dois. A complexidade computacional do algoritmo é \( O(\log(\min(A, B))) \), o que o torna extremamente eficiente mesmo para números muito grandes.
+
+A eficiência do Algoritmo de Euclides o torna preferido em muitos contextos de aplicação, desde cálculos aritméticos básicos até implementações em hardware e criptografia, onde cálculos rápidos e precisos do GCD são frequentemente necessários.
 
 \subsection{Aplicações do GCD em Computação}
-% Descrição das aplicações práticas do GCD em computação, como em criptografia (ex.: RSA), compressão de dados e sistemas de controle. Discutir porque o GCD é uma operação relevante em hardware.
+O \textit{Greatest Common Divisor} (GCD), ou Máximo Divisor Comum (MDC), é uma operação fundamental com diversas aplicações práticas em computação. Sua relevância se estende desde algoritmos básicos até sistemas complexos de criptografia, compressão de dados e implementação em hardware.
+
+Uma das aplicações mais notáveis do GCD está na criptografia, especialmente em sistemas de criptografia assimétrica, como o algoritmo RSA. O RSA depende da dificuldade de fatorar grandes números primos, e a função GCD é usada para determinar se dois números são \textit{coprimos}, ou seja, se seu GCD é 1. A coprimosidade é um conceito crucial no processo de geração de chaves no RSA, onde o GCD garante que a chave pública e o módulo sejam adequados para a operação de criptografia e descriptografia.
+
+Outra aplicação importante do GCD é na compressão de dados. Técnicas de compressão como o \textit{Run-Length Encoding} (RLE) podem utilizar o GCD para determinar padrões de repetição e reduzir a redundância nos dados. Além disso, algoritmos de compressão baseados em análise de fatores de números, como o \textit{factoring-based compression}, usam o GCD para simplificar expressões numéricas e otimizar o armazenamento.
+
+Em \textbf{sistemas de controle}, especialmente em hardware, o GCD é utilizado para simplificar os cálculos que envolvem múltiplos ciclos de operação ou para sincronizar sinais em circuitos digitais. No contexto de \textit{Control and Datapath}, a operação de GCD pode ser implementada em circuitos que exigem operações de redução, como divisões sucessivas, facilitando a minimização de recursos computacionais.
+
+A operação de GCD é relevante em hardware porque ela pode ser implementada de forma eficiente utilizando componentes básicos como registradores, multiplexadores e subtratores, que são comuns em \textit{datapaths} de circuitos digitais. A eficiência do GCD, especialmente quando implementado com o \textit{Algoritmo de Euclides}, permite que ele seja utilizado em sistemas de tempo real e em dispositivos embarcados, onde a velocidade de processamento e o uso mínimo de recursos são críticos. Além disso, o GCD é frequentemente empregado em \textbf{algoritmos de síntese lógica} para otimizar o design de circuitos e na verificação formal de \textit{hardware}.
+
+Em resumo, o GCD é uma operação essencial em diversas áreas da computação, proporcionando uma base sólida para algoritmos criptográficos, técnicas de compressão de dados e a implementação eficiente de sistemas de controle em \textit{hardware} digital.
 
 \section{Desenho de Arquitetura}
 % Nesta seção, descreva a arquitetura utilizada para a implementação do GCD em hardware. Inclua uma visão geral dos módulos e suas interações.
