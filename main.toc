@@ -24,5 +24,3 @@
 \contentsline {subsection}{\numberline {7.2}Expansão do Design para Sistemas Maiores}{8}{}%
 \contentsline {section}{\numberline {8}Discussão sobre Integração com Sistemas Maiores}{8}{}%
 \contentsline {section}{\numberline {9}Conclusões}{8}{}%
-\contentsline {section}{\numberline {10}CONTRIBUIÇÕES DOS AUTORES}{8}{}%
-\contentsline {section}{\numberline {11}Agradecimentos}{9}{}%

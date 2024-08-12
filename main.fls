@@ -179,8 +179,8 @@ INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx144
 INPUT .\main.toc
 INPUT .\main.toc
 INPUT main.toc
-INPUT C:\Users\raulp\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 OUTPUT main.toc
+INPUT C:\Users\raulp\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
 INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
 INPUT C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
