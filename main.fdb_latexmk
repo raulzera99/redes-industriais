@@ -1,17 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1723484260.76049 "main.aux" "main.bbl" "main" 1723484263.41021 0
+["bibtex main"] 1723484346.64064 "main.aux" "main.bbl" "main" 1723484349.43419 0
   "./bibliografia.bib" 1723482649 2722 aa68dddf78772fa72ad1b4ed2a9b10d5 ""
   "C:/Program Files/MiKTeX/bibtex/bib/abntex2/abntex2-options.bib" 1543103229 5396 4eb260dac60f150ae608d45252853090 ""
   "C:/Program Files/MiKTeX/bibtex/bst/abntex2/abntex2-alf.bst" 1543103230 60064 0819ac8568f9a482510a46e3a8a6f605 ""
-  "main.aux" 1723484262 5328 13497584dab5666b97f75ff66b1a564a "pdflatex"
+  "main.aux" 1723484347 4637 1c5861c3d8896522303cbd1eee1cd8f4 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1723484261.12344 "c:/Users/Leonardo/Documents/GitHub/greatest-common-divisor-hardware/main.tex" "main.pdf" "main" 1723484263.41081 0
+["pdflatex"] 1723484347.03921 "c:/Users/Leonardo/Documents/GitHub/greatest-common-divisor-hardware/main.tex" "main.pdf" "main" 1723484349.43546 0
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1095.tfm" 993061956 3228 aacd2ac2d814480e4422ad7e830fd2d4 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1200.tfm" 993061958 3200 b8d69bc738e5ef3e08cefeef3109ff56 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1440.tfm" 993061960 3196 0b37fa3083e15c57cfa8c4ff52f2807a ""
+  "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecrm0600.tfm" 993062116 3160 116e21835795bb29209ae8bb4682382f ""
+  "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecrm0800.tfm" 993062118 3152 11ecf5aad6aacf00ff18f394ab23a8b5 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecrm1095.tfm" 993062124 3172 eb6efaa83c6c52473a1c403f376eab0f ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecrm1200.tfm" 993062126 3152 4850ff0163852b7fab34bd55e1197f28 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecrm1440.tfm" 993062128 3168 3bd7b08ba4330af81521911744311212 ""
@@ -34,7 +36,10 @@
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmsy10.tfm" 1136765053 1124 6c73e740cf17375f03eec0ee63599741 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmsy6.tfm" 1136765053 1116 933a60c408fc0a863a92debe84b2d294 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
+  "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
+  "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Program Files/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Program Files/MiKTeX/tex/generic/babel/babel.sty" 1704647332 150008 7a05b0fdc0167c04e192003e780ab195 ""
   "C:/Program Files/MiKTeX/tex/generic/babel/txtbabel.def" 1704647332 6948 df63e25be1d2bc35bbad5a0141f41348 ""
@@ -102,13 +107,13 @@
   "C:/Users/Leonardo/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1095.pk" 1723040770 21972 b76e9a1de7e14e44a3c46a61ff6f82c5 ""
   "C:/Users/Leonardo/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1723040772 12668 c713b08fe5094007bea816d0b18e9fc6 ""
   "C:/Users/Leonardo/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1723040510 24215239 76e5b88279f5b9a9a6782105cd816920 ""
-  "c:/Users/Leonardo/Documents/GitHub/greatest-common-divisor-hardware/main.tex" 1723484257 19951 9f6a427c1c16032fbba2c6eb34e51e52 ""
+  "c:/Users/Leonardo/Documents/GitHub/greatest-common-divisor-hardware/main.tex" 1723484339 26674 9d4e0cc3398711ee634ee49943964f6d ""
   "cabecalho.tex" 1723423350 3615 09f10e4eef07e9199c315a7a1e180e2f ""
   "imgs/logo_ifsp.png" 1723423350 4070 64c56fc9e5b78266e59be2ea043940ad ""
-  "main.aux" 1723484262 5328 13497584dab5666b97f75ff66b1a564a "pdflatex"
-  "main.bbl" 1723484261 2610 f715ca3ae8d490ebc2da4b5817c678cc "bibtex main"
-  "main.tex" 1723484257 19951 9f6a427c1c16032fbba2c6eb34e51e52 ""
-  "main.toc" 1723484262 2171 dc28e888f2d9e6c5b1ad63db023ef7a0 "pdflatex"
+  "main.aux" 1723484347 4637 1c5861c3d8896522303cbd1eee1cd8f4 "pdflatex"
+  "main.bbl" 1723484346 1344 c342bfd13d0865d763f89281230f3e83 "bibtex main"
+  "main.tex" 1723484339 26674 9d4e0cc3398711ee634ee49943964f6d ""
+  "main.toc" 1723484347 2182 ac1e7559aaa2c250fec4c0a57a74940b "pdflatex"
   "preambulo.tex" 1723038416 1656 f5421a0941cc375ea62777ec6abffafc ""
   (generated)
   "main.aux"
