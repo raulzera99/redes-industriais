@@ -1,31 +1,12 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%% Modelo desenvolvido por Alunos do IFSP - PEP para o CONICT 2020.
-% Autores: Christopher Alves de Oliveira, Inácio Ribeiro, Paulo Ricardo Servilha Sparapan.
-% Professores: Alexandre Ataide Carniato e Diego Nunes da Silva
-% Data: 18/08/2020.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Atualizado para o CONICT 2021 - Cubatão pelo professor Glauber Renato Colnago 
-% Data: 7/6/2021
-% Atualizado para o CONICT 2022 - São Paulo pelo professor Francisco Yastami Nakamoto 
-% Data: 24/06/2022
-% Atualizado para o CONICT 2023 - Capivari pelo professor Thiago Pedro Donadon Homem
-% Data: 24/05/2023
-% Atualizado para o CONICT 2024 - Barretos pelo professor Rodrigo Yamakami Camilo
-% Data: 09/05/2024
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \documentclass[a4paper,11pt]{article} %Selecionando a classe que gera artigos.
 
 \input{preambulo} %Pacotes principais
 
 \fancypagestyle{empty}{%
 \fancyhf{}% clear all header and footer fields
-\fancyfoot[L]{15º CONICT 2024} % except the center
-\fancyfoot[C]{\thepage} % except the center
-\fancyfoot[R]{ISSN: 2178-9959} % except the center
+\fancyfoot[L]{Linguagem e Descrição de Hardware} % except the center
+\fancyfoot[R]{\thepage} % except the center
+% \fancyfoot[R]{ISSN: 2178-9959} % except the center
 \renewcommand{\headrulewidth}{0pt}%
 \renewcommand{\footrulewidth}{0pt}%
 }
@@ -35,37 +16,91 @@
 
 \input{cabecalho} %Alterar Título, autores, e apagar tabela !
 
+\begin{center}
+    \tableofcontents %Gera o sumário
+\end{center}
+
+\newpage
+
 %----------------------------------------TEXTOS-------------------------------------------------%
 
 \vspace{0.5cm}
-\noindent\textbf{RESUMO}: Este artigo apresenta a implementação do algoritmo para cálculo do Greatest Common Divisor (GCD) em hardware, utilizando uma abordagem de Control e Datapath. Serão abordadas as principais etapas de desenvolvimento, incluindo a descrição do algoritmo em linguagem C, a modelagem dos módulos de controle e datapath em Verilog, e a simulação e validação do sistema.
+\noindent\textbf{RESUMO}: 
+Este artigo apresenta a implementação do algoritmo para cálculo do 
+Greatest Common Divisor (GCD) em hardware, 
+utilizando uma abordagem de Control e Datapath. 
+Serão abordadas as principais etapas de desenvolvimento, 
+incluindo a descrição do algoritmo em linguagem C, 
+a modelagem dos módulos de controle e datapath em Verilog, 
+e a simulação e validação do sistema.
 
 \vspace{0.5cm}
-\noindent\textbf{PALAVRAS-CHAVE}: GCD; Greatest Common Divisor; Hardware Description Language; Control; Datapath.
+\noindent\textbf{PALAVRAS-CHAVE}: 
+GCD; Greatest Common Divisor; Hardware Description Language; Control; Datapath.
 
 \vspace{0.5cm}
  \begin{center}
- \textbf{TITLE IN ENGLISH}
+ \textbf{Greatest Common Divisor - (GCD)}
  \end{center}
 
-\noindent\textbf{ABSTRACT}: This paper presents the implementation of the Greatest Common Divisor (GCD) algorithm in hardware, using a Control and Datapath approach. The main development steps will be addressed, including the description of the algorithm in C language, the modeling of control and datapath modules in Verilog, and the system simulation and validation.
+\noindent\textbf{ABSTRACT}: 
+This paper presents the implementation of the Greatest Common Divisor (GCD) 
+algorithm in hardware, using a Control and Datapath approach. 
+The main development steps will be addressed, 
+including the description of the algorithm in C language, 
+the modeling of control and datapath modules in Verilog, 
+and the system simulation and validation.
 
 \vspace{0.5cm}
 \noindent\textbf{KEYWORDS}: GCD; Greatest Common Divisor; Hardware Description Language; Control; Datapath.
 
-\section*{Introdução}
+\section{Introdução}
 
-O Greatest Common Divisor (GCD) é um problema clássico da teoria dos números, com aplicações em diversas áreas da computação. Este trabalho baseia-se nas notas de aula da disciplina CSE 141L: Introduction to Computer Architecture Lab, ministrada na Universidade da Califórnia. O objetivo é desenvolver uma implementação eficiente do GCD utilizando linguagem de descrição de hardware.
+O Greatest Common Divisor (GCD) é um problema clássico da teoria dos números, 
+com aplicações em diversas áreas da computação. 
+Este trabalho baseia-se nas notas de aula da disciplina CSE 141L: 
+Introduction to Computer Architecture Lab, 
+ministrada na Universidade da Califórnia. 
+O objetivo é desenvolver uma implementação eficiente do GCD 
+utilizando linguagem de descrição de hardware.
 
-O cálculo do GCD é frequentemente utilizado em algoritmos de criptografia, compressão de dados e outros campos onde operações matemáticas eficientes são essenciais. Este projeto visa criar um design em hardware que maximize a eficiência dessas operações.
+O cálculo do GCD é frequentemente utilizado em algoritmos de criptografia, 
+compressão de dados e outros campos onde operações matemáticas eficientes 
+são essenciais. 
+Este projeto visa criar um design em hardware que maximize a 
+eficiência dessas operações.
 
-As referências devem estar citadas no trabalho conforme a sua forma de citação, como por exemplo \cite{alves}, \cite{galvani} e \cite{national_instruments} ou em Pandorfi, et al, (2007). Na seção Referências devem ser listadas em ordem alfabética \cite{pandorfi}.
+As referências devem estar citadas no trabalho conforme a sua forma de citação, 
+como por exemplo \cite{alves}, \cite{galvani} e \cite{national_instruments} 
+ou em Pandorfi, et al, (2007). 
+Na seção Referências devem ser listadas em ordem alfabética \cite{pandorfi}.
 
-\section*{Materiais e Métodos}
+\section{Fundamentação Teórica}
+% Esta seção deve apresentar os conceitos teóricos fundamentais para o entendimento do GCD e sua relevância em computação. Aborde os princípios matemáticos e as aplicações típicas do GCD.
+
+\subsection{Conceitos Básicos de GCD}
+% Definição do Greatest Common Divisor (GCD) e explicação da importância deste conceito na teoria dos números. Mencionar brevemente como o GCD é utilizado na simplificação de frações, criptografia, e outras áreas da matemática aplicada.
+
+\subsection{Algoritmo de Euclides}
+% Explicação do Algoritmo de Euclides, um dos métodos mais eficientes para calcular o GCD. Detalhar o funcionamento do algoritmo e discutir sua complexidade computacional. 
+
+\subsection{Aplicações do GCD em Computação}
+% Descrição das aplicações práticas do GCD em computação, como em criptografia (ex.: RSA), compressão de dados e sistemas de controle. Discutir porque o GCD é uma operação relevante em hardware.
+
+\section{Desenho de Arquitetura}
+% Nesta seção, descreva a arquitetura utilizada para a implementação do GCD em hardware. Inclua uma visão geral dos módulos e suas interações.
+
+\subsection{Partição em Módulos}
+% Detalhamento da divisão do projeto em módulos de Control e Datapath. Explicar o papel de cada módulo no sistema e como eles se comunicam. Pode incluir um diagrama de blocos para ilustrar.
+
+\subsection{Diagramas de Blocos}
+% Apresentar diagramas de blocos que representem a arquitetura do GCD, mostrando como os diferentes componentes se conectam e interagem. Explicar o fluxo de dados entre os módulos.
+
+\section{Desenvolvimento e Implementação}
 
 Os materiais e métodos utilizados no desenvolvimento da pesquisa incluem a descrição do algoritmo em C, a modelagem dos módulos de controle e datapath em Verilog, e a simulação utilizando o ambiente Intel QuestaSim.
 
-\subsection*{Descrição do Algoritmo em C}
+\subsection{Descrição do Algoritmo em C}
 
 O algoritmo para cálculo do GCD pode ser implementado de diversas maneiras. Abaixo, apresentamos uma implementação em linguagem C:
 
@@ -90,11 +125,11 @@ int GCD(int inA, int inB) {
 }
 \end{verbatim}
 
-\subsection*{Modelagem em Verilog}
+\subsection{Modelagem em Verilog}
 
 A implementação do GCD em hardware envolve a criação de módulos para o controle e o datapath. O datapath lida com a movimentação e transformação dos dados, enquanto o módulo de controle gerencia as operações de controle.
 
-\subsubsection*{Módulo Datapath}
+\subsubsection{Módulo Datapath}
 \begin{verbatim}
 module GCDdatapath#( parameter W=16 )
 (
@@ -155,7 +190,7 @@ module GCDdatapath#( parameter W=16 )
 endmodule
 \end{verbatim}
 
-\subsubsection*{Módulo Controle}
+\subsubsection{Módulo Controle}
 \begin{verbatim}
 module GCDcontrol(
     input input_available,
@@ -252,10 +287,20 @@ module GCDcontrol(
 endmodule
 \end{verbatim}
 
-\section*{Resultados e Discussão}
+\section{Máquina de Estados Finitos (FSM)}
+% Nesta seção, discuta a FSM utilizada para controlar o Datapath.
+
+\subsection{Descrição dos Estados}
+% Descrever os diferentes estados da FSM, explicando o que ocorre em cada estado e como as transições entre estados são gerenciadas. Pode incluir um diagrama de estados para visualização.
+
+\subsection{Implementação da FSM}
+% Discutir como a FSM foi implementada em Verilog, incluindo os desafios encontrados durante o desenvolvimento e como foram superados. Explicar a lógica de transição e os sinais de controle envolvidos.
+
+\section{Simulações e Verificação}
 
 Para validar a implementação, foi realizada a simulação dos módulos utilizando o ambiente Intel QuestaSim. A Figura \ref{fig:simulacao} mostra a simulação do módulo GCD.
 
+\subsection{Simulação do módulo GCD}
 \begin{figure}[ht]
 \centering
 % \includegraphics[width=10cm,angle=0]{simulacao_gcd.png}
@@ -265,14 +310,32 @@ Para validar a implementação, foi realizada a simulação dos módulos utiliza
 
 Os resultados da simulação confirmam que o design do GCD em hardware funciona conforme esperado. O módulo datapath executa corretamente as operações de subtração e troca, enquanto o módulo de controle gerencia os estados do sistema de maneira eficiente.
 
-\section*{Conclusões}
+\subsection{Ambiente de Simulação}
+% Descrever o ambiente de simulação utilizado, como o Intel QuestaSim. Explicar como os testes foram configurados e quais aspectos do sistema foram verificados.
+
+\subsection{Resultados da Simulação}
+% Apresentar os resultados obtidos durante a simulação. Incluir gráficos ou capturas de tela que mostrem a operação do GCD. Discutir se os resultados atenderam às expectativas e os objetivos do projeto.
+
+\section{Otimizações e Melhorias Futuras}
+% Discutir possíveis otimizações no design e propostas para futuras melhorias.
+
+\subsection{Otimização do Datapath}
+% Sugerir melhorias no Datapath, como a implementação de pipelining para aumentar a eficiência. Discutir possíveis modificações que poderiam ser feitas para melhorar o desempenho geral do sistema.
+
+\subsection{Expansão do Design para Sistemas Maiores}
+% Discutir como o design do GCD poderia ser expandido para se integrar com sistemas maiores ou suportar operações mais complexas. Propor ideias para a adaptação do módulo para novas aplicações.
+
+\section{Discussão sobre Integração com Sistemas Maiores}
+% Explorar como o módulo GCD poderia ser integrado em sistemas mais complexos, como processadores ou coprocessadores específicos para criptografia. Discutir os desafios de integração e as vantagens dessa abordagem.
+
+\section{Conclusões}
 
 Neste artigo, apresentamos a implementação do algoritmo GCD em hardware, detalhando a modelagem dos módulos de controle e datapath em Verilog. A simulação mostrou que a abordagem utilizada é eficiente e atende aos requisitos do projeto. Futuras melhorias podem incluir a otimização do datapath e a integração com outros módulos de um sistema maior.
 
-\section*{CONTRIBUIÇÕES DOS AUTORES}
+\section{CONTRIBUIÇÕES DOS AUTORES}
 Raul Prado Dantas, Higor Grigorio dos Santos, Leonardo Reneres, Giovanna Fantacini e Luis contribuíram com a concepção e escopo do estudo. Higor e Raul procederam com a metodologia e experimentos. Leonardo, Giovanna e Luis escreveram o trabalho. Todos os autores contribuíram com a revisão do trabalho e aprovaram a versão submetida.
 
-\section*{Agradecimentos}
+\section{Agradecimentos}
 
 Gostaríamos de agradecer ao Instituto Federal de Educação, Ciência e Tecnologia de São Paulo pelo suporte e infraestrutura fornecidos para a realização deste projeto. Agradecemos também aos professores Michael B. Taylor e Matt Devuyst por suas valiosas contribuições através das notas de aula da disciplina CSE 141L.
 
