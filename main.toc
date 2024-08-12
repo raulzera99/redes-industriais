@@ -21,6 +21,9 @@
 \contentsline {subsection}{\numberline {6.3}Resultados da Simulação}{8}{}%
 \contentsline {section}{\numberline {7}Otimizações e Melhorias Futuras}{8}{}%
 \contentsline {subsection}{\numberline {7.1}Otimização do Datapath}{8}{}%
-\contentsline {subsection}{\numberline {7.2}Expansão do Design para Sistemas Maiores}{8}{}%
-\contentsline {section}{\numberline {8}Discussão sobre Integração com Sistemas Maiores}{8}{}%
-\contentsline {section}{\numberline {9}Conclusões}{8}{}%
+\contentsline {subsubsection}{\numberline {7.1.1}Implemetação do Pipelining}{8}{}%
+\contentsline {subsubsection}{\numberline {7.1.2}Benefícios do Pipelining}{9}{}%
+\contentsline {paragraph}{Conclusão :}{10}{}%
+\contentsline {subsection}{\numberline {7.2}Expansão do Design para Sistemas Maiores}{10}{}%
+\contentsline {section}{\numberline {8}Discussão sobre Integração com Sistemas Maiores e Otimização do Datapath}{10}{}%
+\contentsline {section}{\numberline {9}Conclusões}{10}{}%

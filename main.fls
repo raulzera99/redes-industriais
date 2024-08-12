@@ -179,12 +179,13 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecbx1440.tfm
 INPUT .\main.toc
 INPUT .\main.toc
 INPUT main.toc
-OUTPUT main.toc
 INPUT C:\Users\Leonardo\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+OUTPUT main.toc
 INPUT C:\Program Files\MiKTeX\tex\latex\base\t1cmtt.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\base\t1cmtt.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\base\t1cmtt.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ectt1095.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl
@@ -192,6 +193,8 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecti1095.tfm
 INPUT main.aux
 INPUT C:\Users\Leonardo\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
 INPUT C:\Users\Leonardo\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
+INPUT C:\Users\Leonardo\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
+INPUT C:\Users\Leonardo\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk
 INPUT C:\Users\Leonardo\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk
 INPUT C:\Users\Leonardo\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk
 INPUT C:\Users\Leonardo\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk

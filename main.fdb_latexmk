@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1723423465.11673 "main.aux" "main.bbl" "main" 1723426355.32247 0
-  "./bibliografia.bib" 1723038416 1645 189b4aa07d017602a11ed9492f31c190 ""
+["bibtex main"] 1723484260.76049 "main.aux" "main.bbl" "main" 1723484263.41021 0
+  "./bibliografia.bib" 1723482649 2722 aa68dddf78772fa72ad1b4ed2a9b10d5 ""
   "C:/Program Files/MiKTeX/bibtex/bib/abntex2/abntex2-options.bib" 1543103229 5396 4eb260dac60f150ae608d45252853090 ""
   "C:/Program Files/MiKTeX/bibtex/bst/abntex2/abntex2-alf.bst" 1543103230 60064 0819ac8568f9a482510a46e3a8a6f605 ""
-  "main.aux" 1723426354 4024 fffcb0a156c717ad115cae7e09e25a15 "pdflatex"
+  "main.aux" 1723484262 5328 13497584dab5666b97f75ff66b1a564a "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1723426352.74451 "c:/Users/Leonardo/Documents/GitHub/greatest-common-divisor-hardware/main.tex" "main.pdf" "main" 1723426355.32292 0
+["pdflatex"] 1723484261.12344 "c:/Users/Leonardo/Documents/GitHub/greatest-common-divisor-hardware/main.tex" "main.pdf" "main" 1723484263.41081 0
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1095.tfm" 993061956 3228 aacd2ac2d814480e4422ad7e830fd2d4 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1200.tfm" 993061958 3200 b8d69bc738e5ef3e08cefeef3109ff56 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1440.tfm" 993061960 3196 0b37fa3083e15c57cfa8c4ff52f2807a ""
@@ -17,6 +17,7 @@
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecrm1440.tfm" 993062128 3168 3bd7b08ba4330af81521911744311212 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecti1095.tfm" 993062322 2852 cf233cde705f180d95560390f0f826e7 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ectt1095.tfm" 993062342 1352 fa21dcb5ddc7d1dc47d14cd897fdeb0f ""
+  "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/tcrm1095.tfm" 993062508 1460 8005ce585ff351dff78998923504da5e ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -99,14 +100,15 @@
   "C:/Users/Leonardo/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1095.pk" 1723040773 26228 3c86d02eaeed0b53ff5b9e6aaf9e8a12 ""
   "C:/Users/Leonardo/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecti1095.pk" 1723040769 35204 e5b80bc31b755e9e2cc9842a9a466f94 ""
   "C:/Users/Leonardo/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1095.pk" 1723040770 21972 b76e9a1de7e14e44a3c46a61ff6f82c5 ""
+  "C:/Users/Leonardo/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1723040772 12668 c713b08fe5094007bea816d0b18e9fc6 ""
   "C:/Users/Leonardo/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1723040510 24215239 76e5b88279f5b9a9a6782105cd816920 ""
-  "c:/Users/Leonardo/Documents/GitHub/greatest-common-divisor-hardware/main.tex" 1723426351 12739 1bd68dad612a781d0f5dc493dcd6381d ""
+  "c:/Users/Leonardo/Documents/GitHub/greatest-common-divisor-hardware/main.tex" 1723484257 19951 9f6a427c1c16032fbba2c6eb34e51e52 ""
   "cabecalho.tex" 1723423350 3615 09f10e4eef07e9199c315a7a1e180e2f ""
   "imgs/logo_ifsp.png" 1723423350 4070 64c56fc9e5b78266e59be2ea043940ad ""
-  "main.aux" 1723426354 4024 fffcb0a156c717ad115cae7e09e25a15 "pdflatex"
-  "main.bbl" 1723423465 1501 86745073237596b86638f3f57bb17556 "bibtex main"
-  "main.tex" 1723426351 12739 1bd68dad612a781d0f5dc493dcd6381d ""
-  "main.toc" 1723426354 1927 f92cec412822b86c15c637739ef61e4b "pdflatex"
+  "main.aux" 1723484262 5328 13497584dab5666b97f75ff66b1a564a "pdflatex"
+  "main.bbl" 1723484261 2610 f715ca3ae8d490ebc2da4b5817c678cc "bibtex main"
+  "main.tex" 1723484257 19951 9f6a427c1c16032fbba2c6eb34e51e52 ""
+  "main.toc" 1723484262 2171 dc28e888f2d9e6c5b1ad63db023ef7a0 "pdflatex"
   "preambulo.tex" 1723038416 1656 f5421a0941cc375ea62777ec6abffafc ""
   (generated)
   "main.aux"
