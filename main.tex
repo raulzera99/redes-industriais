@@ -325,19 +325,177 @@ endmodule
 \section{Máquina de Estados Finitos (FSM)}
 % Nesta seção, discuta a FSM utilizada para controlar o Datapath.
 A máquina de estados finitos (FSM) é uma abordagem essencial
-para controlar o fluxo de operações em um sistema digital, 
+para controlar o fluxo de operações em um sistema digital,
 especialmente na implementação de algoritmos como o cálculo
-do Greatest Common Divisor (GCD). A FSM divide o processo 
+do Greatest Common Divisor (GCD). A FSM divide o processo
 de cálculo em diferentes estados, cada um representando uma
 etapa específica na operação, e controla a transição entre
 esses estados com base nas condições de entrada e saídas
-esperadas.
+esperadas. A figura abaixo (FIGURA 1) mostra a FSM utilizada para controlar
+o datapath do GCD.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=7cm,angle=0]{imgs/state_machine_GCD.png}
+    \caption{Máquina de Estados Finitos para o GCD}
+    \label{fig:fsm}
+\end{figure}
 
 \subsection{Descrição dos Estados}
 % Descrever os diferentes estados da FSM, explicando o que ocorre em cada estado e como as transições entre estados são gerenciadas. Pode incluir um diagrama de estados para visualização.
+A FSM apresentada na figura contém três estados principais:
+\textit{WAIT}, \textit{CALC}, e \textit{DONE}. Cada estado desempenha um papel crucial
+no ciclo de vida do cálculo do \textit{GCD}:
+\subsubsection{Estado \textit{WAIT} (Aguardando novos operandos)}
+Este é o estado inicial da FSM, onde o sistema está inativo e
+aguardando a disponibilidade de novos operandos para iniciar o
+cálculo. Neste estado, o sistema verifica a sinalização de
+disponibilidade de entrada (\textbf{input\_available}). Quando
+a sinalização \textbf{input\_available} é ativada, indicando que
+os operandos estão prontos para serem processados, a FSM
+transita para o estado \textit{CALC}.
+
+\subsubsection{Estado CALC (Calculando o GCD)}
+Neste estado, o algoritmo de Euclides é executado, onde
+os valores dos operandos são trocados e subtraídos
+repetidamente até que o menor dos dois operandos seja zero.
+Este processo continua até que a condição de término seja
+atingida (\textit{done} = 1), o que indica que o GCD foi encontrado.
+A FSM permanece neste estado enquanto a condição \textit{done} = 1
+não é satisfeita. Quando a condição \textit{done} = 1 é atingida,
+o sistema transita para o estado \textit{DONE}.
+
+\subsubsection{Estado DONE (Esperando o consumidor receber o resultado)}
+No estado \textit{DONE}, o sistema aguarda que o consumidor ou a
+unidade de processamento a jusante receba o resultado do
+cálculo do \textit{GCD}. Durante este estado, o sistema está
+essencialmente "em espera", até que o sinal \textbf{result\_taken}
+seja ativado.Após o sinal \textbf{result\_taken} ser ativado,
+indicando que o resultado foi processado ou consumido,
+a \textit{FSM} retorna ao estado \textit{WAIT} para reiniciar o ciclo
+com novos operandos.
+
 
 \subsection{Implementação da FSM}
 % Discutir como a FSM foi implementada em Verilog, incluindo os desafios encontrados durante o desenvolvimento e como foram superados. Explicar a lógica de transição e os sinais de controle envolvidos.
+
+A FSM foi implementada em Verilog, utilizando registradores
+para armazenar o estado atual e o próximo estado, e lógica
+combinacional. É possivel separar a implementação da FSM em
+três partes principais: a definição dos estados e sinais de
+controle, a lógica de transição de estados, e a lógica de
+controle de sinais.
+
+\subsubsection{Definição dos Estados e Sinais de Controle}
+O FSM tem três estados principais definidos como constantes locais (\textit{localparam}):
+
+\begin{verbatim}
+        localparam WAIT = 2'd0;
+        localparam CALC = 2'd1;
+        localparam DONE = 2'd2;
+\end{verbatim}
+
+Os sinais de controle da FSM são definidos como registradores de saída (\textit{reg}):
+\begin{verbatim}
+        output reg idle,
+        output reg A_ld, B_sel, B_ld,
+        output reg [1:0] A_sel,
+        output [1:0] State
+        output reg result_rdy,
+\end{verbatim}
+
+Tambem são definidos constantes para os seletores dos multiplexadores A e B:
+\begin{verbatim}
+        // constants naming for A_mux selector
+        localparam A_SEL_IN = 2'b00;
+        localparam A_SEL_SUB = 2'b01;
+        localparam A_SEL_B = 2'b10;
+        localparam A_SEL_X = 2'b11;
+
+        // constants naming for B_mux selector
+        localparam B_SEL_A = 1'b0;
+        localparam B_SEL_IN = 1'b1;
+        localparam B_SEL_X = 1'bx;
+\end{verbatim}
+
+e os estados da FSM são definidos como registradores de 2 bits:
+\begin{verbatim}
+        reg [1:0] CurrentState, NextState;
+\end{verbatim}
+
+\subsubsection{Lógica de Controle de Sinais}
+A FSM é implementada em duas partes principais: a lógica de transição de estados e a lógica de controle de sinais. A lógica de transição de estados é baseada em um bloco \textit{always} que
+atualiza o estado atual (\textit{CurrentState}) com base no próximo estado (\textit{NextState}):
+\begin{verbatim}
+    always @(posedge clk or posedge reset)  
+    begin 
+        // reset the FSM to the initial state when reset signal is active
+        if (reset) 
+            CurrentState <= WAIT;
+        else 
+            CurrentState <= NextState; 
+    end 
+
+    always @(CurrentState)
+    begin
+        // default is to stay in the same state
+        NextState <= CurrentState;
+        case ( CurrentState )
+            WAIT :
+                if ( input_available )
+                    NextState <= CALC;
+            CALC :
+                if ( B_zero )
+                    NextState <= DONE;
+            DONE :
+                if ( result_taken )
+                    NextState <= WAIT;
+        endcase
+    end
+\end{verbatim}
+
+\subsubsection{Controle de Sinais}
+
+A lógica de controle de sinais é implementada em um bloco \textit{always} que define os sinais de controle com base no estado atual da FSM:
+
+\begin{verbatim}
+    always @( * )
+    begin
+        // Default control signals
+        A_sel <= A_SEL_X;
+        A_ld <= 1'b0;
+        B_sel <= B_SEL_X;
+        B_ld <= 1'b0;
+        idle <= 1'b0; 
+        result_rdy = 1'b0;
+
+        case ( CurrentState )
+            WAIT :
+                begin
+                    idle <= 1'b1; 
+                    if(input_available)begin
+                        A_sel <= A_SEL_IN;
+                        B_sel <= B_SEL_IN;
+                        A_ld <= 1'b1;   
+                        B_ld <= 1'b1;
+                    end
+                end
+            CALC :
+                if ( A_lt_B )begin
+                    A_sel <= A_SEL_B;
+                    B_sel <= B_SEL_A;
+                    A_ld <= 1'b1;
+                    B_ld <= 1'b1;
+                end
+                else if ( !B_zero )begin
+                    A_sel <= A_SEL_SUB;
+                    A_ld <= 1'b1;
+                end
+            DONE : 
+                result_rdy <= 1'b1;
+        endcase
+    end
+\end{verbatim}
 
 \section{Simulações e Verificação}
 
