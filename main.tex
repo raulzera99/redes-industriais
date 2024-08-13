@@ -25,30 +25,30 @@
 %----------------------------------------TEXTOS-------------------------------------------------%
 
 \vspace{0.5cm}
-\noindent\textbf{RESUMO}: 
-Este artigo apresenta a implementação do algoritmo para cálculo do 
-Greatest Common Divisor (GCD) em hardware, 
-utilizando uma abordagem de Control e Datapath. 
-Serão abordadas as principais etapas de desenvolvimento, 
-incluindo a descrição do algoritmo em linguagem C, 
-a modelagem dos módulos de controle e datapath em Verilog, 
+\noindent\textbf{RESUMO}:
+Este artigo apresenta a implementação do algoritmo para cálculo do
+Greatest Common Divisor (GCD) em hardware,
+utilizando uma abordagem de Control e Datapath.
+Serão abordadas as principais etapas de desenvolvimento,
+incluindo a descrição do algoritmo em linguagem C,
+a modelagem dos módulos de controle e datapath em Verilog,
 e a simulação e validação do sistema.
 
 \vspace{0.5cm}
-\noindent\textbf{PALAVRAS-CHAVE}: 
+\noindent\textbf{PALAVRAS-CHAVE}:
 GCD; Greatest Common Divisor; Hardware Description Language; Control; Datapath.
 
 \vspace{0.5cm}
- \begin{center}
- \textbf{Greatest Common Divisor - (GCD)}
- \end{center}
+\begin{center}
+    \textbf{Greatest Common Divisor - (GCD)}
+\end{center}
 
-\noindent\textbf{ABSTRACT}: 
-This paper presents the implementation of the Greatest Common Divisor (GCD) 
-algorithm in hardware, using a Control and Datapath approach. 
-The main development steps will be addressed, 
-including the description of the algorithm in C language, 
-the modeling of control and datapath modules in Verilog, 
+\noindent\textbf{ABSTRACT}:
+This paper presents the implementation of the Greatest Common Divisor (GCD)
+algorithm in hardware, using a Control and Datapath approach.
+The main development steps will be addressed,
+including the description of the algorithm in C language,
+the modeling of control and datapath modules in Verilog,
 and the system simulation and validation.
 
 \vspace{0.5cm}
@@ -88,7 +88,7 @@ O Algoritmo de Euclides funciona através de uma série de divisões sucessivas.
 Matematicamente, isso pode ser representado como:
 
 \[
-\text{GCD}(A, B) = \text{GCD}(B, A \mod B)
+    \text{GCD}(A, B) = \text{GCD}(B, A \mod B)
 \]
 
 Quando \( B \) se torna zero, \( A \) contém o GCD dos dois números iniciais.
@@ -337,10 +337,10 @@ Para validar a implementação, foi realizada a simulação dos módulos utiliza
 
 \subsection{Simulação do módulo GCD}
 \begin{figure}[ht]
-\centering
-% \includegraphics[width=10cm,angle=0]{simulacao_gcd.png}
-\caption{Simulação do módulo GCD}
-\label{fig:simulacao}
+    \centering
+    % \includegraphics[width=10cm,angle=0]{simulacao_gcd.png}
+    \caption{Simulação do módulo GCD}
+    \label{fig:simulacao}
 \end{figure}
 
 Os resultados da simulação confirmam que o design do GCD em hardware funciona conforme esperado. O módulo datapath executa corretamente as operações de subtração e troca, enquanto o módulo de controle gerencia os estados do sistema de maneira eficiente.
@@ -367,7 +367,7 @@ Uma possível otimização é a implementação de pipelining no datapath. Isso 
 O pipelining é uma técnica fundamental para aumentar a eficiência e o desempenho de sistemas de processamento. Ao aplicar pipelining no datapath do algoritmo GCD, podemos dividir o processo de cálculo em estágios distintos que podem ser executados em paralelo, reduzindo o tempo total necessário para a execução e aumentando o throughput \cite{Hennessy2017}.
 
 \begin{enumerate}
-    \item \textbf{Divisão do Algoritmo GCD em Estágios}
+\item \textbf{Divisão do Algoritmo GCD em Estágios}
 
 
 
@@ -379,7 +379,7 @@ Para o algoritmo GCD, que geralmente é implementado usando o Algoritmo de Eucli
     \item \textbf{Estágio 3:} Verificação da Condição de Parada - Verifica se o resto é zero, o que indica que o cálculo está concluído \cite{Knuth1997}.
 \end{itemize}
 
- \item \textbf{Implementação do Pipelining}
+\item \textbf{Implementação do Pipelining}
 
 A implementação do pipelining para o GCD pode ser feita da seguinte maneira:
 
@@ -397,19 +397,19 @@ A implementação do pipelining para o GCD pode ser feita da seguinte maneira:
     \item \textbf{Redução do Tempo de Execução} Ao dividir o trabalho entre vários estágios e processar diferentes partes do algoritmo simultaneamente, o tempo total para concluir a operação de GCD é reduzido.
     \item \textbf{Aumento do Throughput:} A capacidade de processar múltiplos cálculos de GCD em paralelo pode aumentar o throughput geral do sistema \cite{Harris2010}.
     \item \textbf{Paralelismo de dados:}
-        \begin{itemize}
-            \item \textbf{Execução Paralela:} Implementar execução paralela para processar múltiplos pares de números simultaneamente. Isso pode ser feito usando múltiplos pipelines ou unidades de processamento.
-        \end{itemize}
-        \item \textbf{Otimização de Hardware:} 
-            \begin{itemize}
-                \item \textbf{Uso de Recursos Específicos:} Utilizar unidades de hardware específicas para operações matemáticas, como divisores de alto desempenho, para acelerar o cálculo do resto.
-                \item \textbf{Redução de Latência:} Minimizar a latência entre as operações utilizando técnicas de otimização de circuito.
-                \item \textbf{Eficiência Energética:} Implementar técnicas para reduzir o consumo de energia, como a otimização do design do circuito e o uso eficiente dos recursos de hardware.
-            \end{itemize}
+          \begin{itemize}
+              \item \textbf{Execução Paralela:} Implementar execução paralela para processar múltiplos pares de números simultaneamente. Isso pode ser feito usando múltiplos pipelines ou unidades de processamento.
+          \end{itemize}
+    \item \textbf{Otimização de Hardware:}
+          \begin{itemize}
+              \item \textbf{Uso de Recursos Específicos:} Utilizar unidades de hardware específicas para operações matemáticas, como divisores de alto desempenho, para acelerar o cálculo do resto.
+              \item \textbf{Redução de Latência:} Minimizar a latência entre as operações utilizando técnicas de otimização de circuito.
+              \item \textbf{Eficiência Energética:} Implementar técnicas para reduzir o consumo de energia, como a otimização do design do circuito e o uso eficiente dos recursos de hardware.
+          \end{itemize}
     \item \textbf{Algoritmos Alternativos:}
-        \begin{itemize}
-            \item \textbf{Exploração de Algoritmos:} Explorar algoritmos alternativos para o cálculo do GCD que possam oferecer melhorias em termos de eficiência e velocidade \cite{Skiena2008}.
-        \end{itemize}
+          \begin{itemize}
+              \item \textbf{Exploração de Algoritmos:} Explorar algoritmos alternativos para o cálculo do GCD que possam oferecer melhorias em termos de eficiência e velocidade \cite{Skiena2008}.
+          \end{itemize}
 \end{enumerate}
 
 % Redução do Tempo de Execução: Ao dividir o trabalho entre vários estágios e processar diferentes partes do algoritmo simultaneamente, o tempo total para concluir a operação de GCD é reduzido.

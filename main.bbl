@@ -7,27 +7,22 @@
 
 \bibitem[Harris e Harris 2007]{Harris2010}
 \abntrefinfo{Harris e Harris}{HARRIS; HARRIS}{2007}
-{HARRIS, D.~M.; HARRIS, S.~L. \emph{Digital Design and Computer Architecture}.
-  [S.l.]: Morgan Kaufmann, 2007.}
+{HARRIS, D.~M.; HARRIS, S.~L. \emph{Digital Design and Computer Architecture}. [S.l.]: Morgan Kaufmann, 2007.}
 
 \bibitem[Hennessy e Patterson 2017]{Hennessy2017}
 \abntrefinfo{Hennessy e Patterson}{HENNESSY; PATTERSON}{2017}
-{HENNESSY, J.~L.; PATTERSON, D.~A. \emph{Computer Architecture: A Quantitative
-  Approach}. 6th. ed. [S.l.]: Morgan Kaufmann, 2017.}
+{HENNESSY, J.~L.; PATTERSON, D.~A. \emph{Computer Architecture: A Quantitative Approach}. 6th. ed. [S.l.]: Morgan Kaufmann, 2017.}
 
 \bibitem[Knuth 1997]{Knuth1997}
 \abntrefinfo{Knuth}{KNUTH}{1997}
-{KNUTH, D.~E. \emph{The Art of Computer Programming, Volume 1: Fundamental
-  Algorithms}. 3rd. ed. [S.l.]: Addison-Wesley, 1997.}
+{KNUTH, D.~E. \emph{The Art of Computer Programming, Volume 1: Fundamental Algorithms}. 3rd. ed. [S.l.]: Addison-Wesley, 1997.}
 
 \bibitem[Patterson e Hennessy 2013]{Patterson2013}
 \abntrefinfo{Patterson e Hennessy}{PATTERSON; HENNESSY}{2013}
-{PATTERSON, D.~A.; HENNESSY, J.~L. \emph{Computer Organization and Design: The
-  Hardware/Software Interface}. 5th. ed. [S.l.]: Morgan Kaufmann, 2013.}
+{PATTERSON, D.~A.; HENNESSY, J.~L. \emph{Computer Organization and Design: The Hardware/Software Interface}. 5th. ed. [S.l.]: Morgan Kaufmann, 2013.}
 
 \bibitem[Skiena 2008]{Skiena2008}
 \abntrefinfo{Skiena}{SKIENA}{2008}
-{SKIENA, S.~S. \emph{The Algorithm Design Manual}. 2nd. ed. [S.l.]: Springer,
-  2008.}
+{SKIENA, S.~S. \emph{The Algorithm Design Manual}. 2nd. ed. [S.l.]: Springer, 2008.}
 
 \end{thebibliography}
