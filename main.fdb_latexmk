@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1723485003.1141 "main.aux" "main.bbl" "main" 1723485005.77753 0
+["bibtex main"] 1723485003.1141 "main.aux" "main.bbl" "main" 1723514968.62059 0
   "./bibliografia.bib" 1723484996 2721 2aec3bae3272469eab0e27c607d4d1dd ""
   "C:/Program Files/MiKTeX/bibtex/bib/abntex2/abntex2-options.bib" 1543103229 5396 4eb260dac60f150ae608d45252853090 ""
   "C:/Program Files/MiKTeX/bibtex/bst/abntex2/abntex2-alf.bst" 1543103230 60064 0819ac8568f9a482510a46e3a8a6f605 ""
-  "main.aux" 1723485004 4621 650ab3776b023b26f89e8629397cefd2 "pdflatex"
+  "main.aux" 1723514967 4621 650ab3776b023b26f89e8629397cefd2 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1723485003.50057 "c:/Users/Leonardo/Documents/GitHub/greatest-common-divisor-hardware/main.tex" "main.pdf" "main" 1723485005.77808 0
+["pdflatex"] 1723514966.71515 "c:/Users/Leonardo/Documents/GitHub/greatest-common-divisor-hardware/main.tex" "main.pdf" "main" 1723514968.621 0
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1095.tfm" 993061956 3228 aacd2ac2d814480e4422ad7e830fd2d4 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1200.tfm" 993061958 3200 b8d69bc738e5ef3e08cefeef3109ff56 ""
   "C:/Program Files/MiKTeX/fonts/tfm/jknappen/ec/ecbx1440.tfm" 993061960 3196 0b37fa3083e15c57cfa8c4ff52f2807a ""
@@ -107,13 +107,13 @@
   "C:/Users/Leonardo/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ectt1095.pk" 1723040770 21972 b76e9a1de7e14e44a3c46a61ff6f82c5 ""
   "C:/Users/Leonardo/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1723040772 12668 c713b08fe5094007bea816d0b18e9fc6 ""
   "C:/Users/Leonardo/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1723040510 24215239 76e5b88279f5b9a9a6782105cd816920 ""
-  "c:/Users/Leonardo/Documents/GitHub/greatest-common-divisor-hardware/main.tex" 1723484996 26672 9f99a001f5d9ff95f4cf92ade4366910 ""
+  "c:/Users/Leonardo/Documents/GitHub/greatest-common-divisor-hardware/main.tex" 1723514966 26672 9f99a001f5d9ff95f4cf92ade4366910 ""
   "cabecalho.tex" 1723423350 3615 09f10e4eef07e9199c315a7a1e180e2f ""
   "imgs/logo_ifsp.png" 1723423350 4070 64c56fc9e5b78266e59be2ea043940ad ""
-  "main.aux" 1723485004 4621 650ab3776b023b26f89e8629397cefd2 "pdflatex"
+  "main.aux" 1723514967 4621 650ab3776b023b26f89e8629397cefd2 "pdflatex"
   "main.bbl" 1723485003 1334 a705752e8772ee44bad28c0970256fa7 "bibtex main"
-  "main.tex" 1723484996 26672 9f99a001f5d9ff95f4cf92ade4366910 ""
-  "main.toc" 1723485004 2182 ac1e7559aaa2c250fec4c0a57a74940b "pdflatex"
+  "main.tex" 1723514966 26672 9f99a001f5d9ff95f4cf92ade4366910 ""
+  "main.toc" 1723514967 2182 ac1e7559aaa2c250fec4c0a57a74940b "pdflatex"
   "preambulo.tex" 1723038416 1656 f5421a0941cc375ea62777ec6abffafc ""
   (generated)
   "main.aux"
