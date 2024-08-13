@@ -5,7 +5,7 @@
 \contentsline {subsection}{\numberline {2.2}Algoritmo de Euclides}{4}{}%
 \contentsline {subsection}{\numberline {2.3}Aplicações do GCD em Computação}{5}{}%
 \contentsline {section}{\numberline {3}Desenho de Arquitetura}{5}{}%
-\contentsline {subsection}{\numberline {3.1}Partição em Módulos}{5}{}%
+\contentsline {subsection}{\numberline {3.1}Partição em Módulos}{6}{}%
 \contentsline {subsubsection}{\numberline {3.1.1}Módulo de Controle}{6}{}%
 \contentsline {subsubsection}{\numberline {3.1.2}Módulo Datapath}{6}{}%
 \contentsline {subsection}{\numberline {3.2}Diagramas de Blocos}{6}{}%
@@ -23,6 +23,9 @@
 \contentsline {subsection}{\numberline {6.3}Resultados da Simulação}{20}{}%
 \contentsline {section}{\numberline {7}Otimizações e Melhorias Futuras}{20}{}%
 \contentsline {subsection}{\numberline {7.1}Otimização do Datapath}{20}{}%
-\contentsline {subsection}{\numberline {7.2}Expansão do Design para Sistemas Maiores}{20}{}%
-\contentsline {section}{\numberline {8}Discussão sobre Integração com Sistemas Maiores}{20}{}%
-\contentsline {section}{\numberline {9}Conclusões}{20}{}%
+\contentsline {subsubsection}{\numberline {7.1.1}Implemetação do Pipelining}{20}{}%
+\contentsline {subsubsection}{\numberline {7.1.2}Benefícios do Pipelining}{21}{}%
+\contentsline {paragraph}{Conclusão :}{21}{}%
+\contentsline {subsection}{\numberline {7.2}Expansão do Design para Sistemas Maiores}{21}{}%
+\contentsline {section}{\numberline {8}Discussão sobre Integração com Sistemas Maiores e Otimização do Datapath}{22}{}%
+\contentsline {section}{\numberline {9}Conclusões}{22}{}%

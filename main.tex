@@ -57,24 +57,11 @@ GCD; Greatest Common Divisor; Hardware Description Language; Control; Datapath;
 
 \section{Introdução}
 
-O Greatest Common Divisor (GCD) é um problema clássico da teoria dos números, 
-com aplicações em diversas áreas da computação. 
-Este trabalho baseia-se nas notas de aula da disciplina CSE 141L: 
-Introduction to Computer Architecture Lab, 
-ministrada na Universidade da Califórnia. 
-O objetivo é desenvolver uma implementação eficiente do GCD 
-utilizando linguagem de descrição de hardware.
+O \textit{Greatest Common Divisor} (GCD), ou Máximo Divisor Comum (MDC), é um conceito fundamental na teoria dos números. Sua importância se manifesta em diversas áreas da computação, onde desempenha um papel crucial em algoritmos essenciais. Entre essas aplicações, destacam-se os sistemas de criptografia, onde o GCD é utilizado para garantir a segurança das comunicações, e os algoritmos de compressão de dados, onde contribui para a otimização do armazenamento e transmissão de informações.
 
-O cálculo do GCD é frequentemente utilizado em algoritmos de criptografia, 
-compressão de dados e outros campos onde operações matemáticas eficientes 
-são essenciais. 
-Este projeto visa criar um design em hardware que maximize a 
-eficiência dessas operações.
+Além disso, o GCD é amplamente empregado em sistemas de controle em hardware, onde sua implementação é importante para o funcionamento de dispositivos embarcados e sistemas de tempo real. A capacidade do GCD de simplificar operações e reduzir a complexidade dos cálculos faz dele um componente indispensável na construção de circuitos digitais robustos e eficientes. Por isso, o entendimento profundo desse conceito e sua aplicação prática são de extrema relevância para engenheiros e cientistas da computação.
 
-As referências devem estar citadas no trabalho conforme a sua forma de citação, 
-como por exemplo \cite{alves}, \cite{galvani} e \cite{national_instruments} 
-ou em Pandorfi, et al, (2007). 
-Na seção Referências devem ser listadas em ordem alfabética \cite{pandorfi}.
+Este estudo busca explorar não apenas a teoria por trás do GCD, mas também sua aplicação prática por meio de implementações computacionais. A pesquisa foca no desenvolvimento de simulações em software, abordando desde a modelagem até a implementação.
 
 \section{Fundamentação Teórica} 
 % Esta seção deve apresentar os conceitos teóricos fundamentais para o entendimento do GCD e sua relevância em computação. Aborde os princípios matemáticos e as aplicações típicas do GCD.
@@ -533,16 +520,104 @@ Os resultados da simulação confirmam que o design do GCD em hardware funciona 
 % Apresentar os resultados obtidos durante a simulação. Incluir gráficos ou capturas de tela que mostrem a operação do GCD. Discutir se os resultados atenderam às expectativas e os objetivos do projeto.
 
 \section{Otimizações e Melhorias Futuras}
-% Discutir possíveis otimizações no design e propostas para futuras melhorias.
+
+Mesmo se tratando de um algoritmo relativamente simples, o design do GCD em hardware pode ser otimizado e expandido para atender a requisitos mais exigentes. Nesta seção, discutiremos possíveis melhorias no design, como a implementação de pipelining no datapath e a expansão do sistema para suportar operações mais complexas.
+
+
+
 
 \subsection{Otimização do Datapath}
 % Sugerir melhorias no Datapath, como a implementação de pipelining para aumentar a eficiência. Discutir possíveis modificações que poderiam ser feitas para melhorar o desempenho geral do sistema.
+Uma possível otimização é a implementação de pipelining no datapath. Isso permitiria que várias operações de subtração e troca fossem executadas em paralelo, aumentando a eficiência do sistema. Além disso, o uso de registradores adicionais poderia reduzir o número de operações de leitura e escrita na memória, melhorando ainda mais o desempenho.
+
+
+\subsubsection{Implemetação do Pipelining}
+O pipelining é uma técnica fundamental para aumentar a eficiência e o desempenho de sistemas de processamento. Ao aplicar pipelining no datapath do algoritmo GCD, podemos dividir o processo de cálculo em estágios distintos que podem ser executados em paralelo, reduzindo o tempo total necessário para a execução e aumentando o throughput \cite{Hennessy2017}.
+
+\begin{enumerate}
+    \item \textbf{Divisão do Algoritmo GCD em Estágios}
+
+
+
+Para o algoritmo GCD, que geralmente é implementado usando o Algoritmo de Euclides, podemos dividir o processamento em vários estágios:
+
+\begin{itemize}
+    \item \textbf{Estágio 1:} Cálculo do Resto - Calcula o resto da divisão entre dois números.
+    \item \textbf{Estágio 2:} Atualização dos Valores - Atualiza os valores dos números com base no resto calculado.
+    \item \textbf{Estágio 3:} Verificação da Condição de Parada - Verifica se o resto é zero, o que indica que o cálculo está concluído \cite{Knuth1997}.
+\end{itemize}
+
+ \item \textbf{Implementação do Pipelining}
+
+A implementação do pipelining para o GCD pode ser feita da seguinte maneira:
+
+\begin{itemize}
+    \item \textbf{Pipelide de Estágios}: Cada estágio do pipeline pode ser otimizado para realizar sua tarefa específica simultaneamente com outros estágios. Por exemplo, enquanto um estágio calcula o resto, outro pode estar atualizando os valores ou verificando a condição de parada.
+    \item \textbf{Buffer de Pipeline}: Adicionar buffers entre os estágios para armazenar dados temporários e permitir que o processamento continue sem interrupções.
+    \item \textbf{Controle de Fluxo}: Implementar mecanismos de controle para gerenciar a sincronização entre os estágios e garantir que cada estágio receba os dados no momento certo \cite{Patterson2013}.
+\end{itemize}
+
+\end {enumerate}
+
+\subsubsection{Benefícios do Pipelining}
+
+\begin{enumerate}
+    \item \textbf{Redução do Tempo de Execução} Ao dividir o trabalho entre vários estágios e processar diferentes partes do algoritmo simultaneamente, o tempo total para concluir a operação de GCD é reduzido.
+    \item \textbf{Aumento do Throughput:} A capacidade de processar múltiplos cálculos de GCD em paralelo pode aumentar o throughput geral do sistema \cite{Harris2010}.
+    \item \textbf{Paralelismo de dados:}
+        \begin{itemize}
+            \item \textbf{Execução Paralela:} Implementar execução paralela para processar múltiplos pares de números simultaneamente. Isso pode ser feito usando múltiplos pipelines ou unidades de processamento.
+        \end{itemize}
+        \item \textbf{Otimização de Hardware:} 
+            \begin{itemize}
+                \item \textbf{Uso de Recursos Específicos:} Utilizar unidades de hardware específicas para operações matemáticas, como divisores de alto desempenho, para acelerar o cálculo do resto.
+                \item \textbf{Redução de Latência:} Minimizar a latência entre as operações utilizando técnicas de otimização de circuito.
+                \item \textbf{Eficiência Energética:} Implementar técnicas para reduzir o consumo de energia, como a otimização do design do circuito e o uso eficiente dos recursos de hardware.
+            \end{itemize}
+    \item \textbf{Algoritmos Alternativos:}
+        \begin{itemize}
+            \item \textbf{Exploração de Algoritmos:} Explorar algoritmos alternativos para o cálculo do GCD que possam oferecer melhorias em termos de eficiência e velocidade \cite{Skiena2008}.
+        \end{itemize}
+\end{enumerate}
+
+% Redução do Tempo de Execução: Ao dividir o trabalho entre vários estágios e processar diferentes partes do algoritmo simultaneamente, o tempo total para concluir a operação de GCD é reduzido.
+% Aumento do Throughput: A capacidade de processar múltiplos cálculos de GCD em paralelo pode aumentar o throughput geral do sistema \cite{Harris2010}.
+% Possíveis Modificações para Melhorar o Desempenho
+% Além do pipelining, outras modificações podem ser feitas para melhorar o desempenho geral do sistema:
+
+% 1. Paralelismo de Dados
+
+% Execução Paralela: Implementar execução paralela para processar múltiplos pares de números simultaneamente. Isso pode ser feito usando múltiplos pipelines ou unidades de processamento.
+% 2. Otimização de Hardware
+
+% Uso de Recursos Específicos: Utilizar unidades de hardware específicas para operações matemáticas, como divisores de alto desempenho, para acelerar o cálculo do resto.
+% Redução de Latência: Minimizar a latência entre as operações utilizando técnicas de otimização de circuito.
+% 3. Eficiência Energética
+
+% Otimização de Consumo de Energia: Implementar técnicas para reduzir o consumo de energia, como a otimização do design do circuito e o uso eficiente dos recursos de hardware.
+% 4. Algoritmos Alternativos
+
+% Exploração de Algoritmos: Explorar algoritmos alternativos para o cálculo do GCD que possam oferecer melhorias em termos de eficiência e velocidade \cite{Bressoud2011}.
+\paragraph{Conclusão :}
+A aplicação de pipelining e outras técnicas de otimização pode significativamente melhorar a eficiência e o desempenho do datapath para o algoritmo GCD. Ao dividir o trabalho em estágios e implementar estratégias para reduzir latência e aumentar o throughput, podemos alcançar um sistema mais rápido e eficiente.
+
 
 \subsection{Expansão do Design para Sistemas Maiores}
 % Discutir como o design do GCD poderia ser expandido para se integrar com sistemas maiores ou suportar operações mais complexas. Propor ideias para a adaptação do módulo para novas aplicações.
 
-\section{Discussão sobre Integração com Sistemas Maiores}
+Outra melhoria futura seria a expansão do design para suportar sistemas maiores ou operações mais complexas. Por exemplo, o módulo GCD poderia ser integrado a um processador ou coprocessador específico para criptografia. Isso exigiria a adaptação do módulo para se comunicar com outros componentes do sistema e lidar com algoritmos mais avançados.
+
+
+
+
+\section{Discussão sobre Integração com Sistemas Maiores e Otimização do Datapath}
 % Explorar como o módulo GCD poderia ser integrado em sistemas mais complexos, como processadores ou coprocessadores específicos para criptografia. Discutir os desafios de integração e as vantagens dessa abordagem.
+
+É importante ressaltar que essas otimizações e melhorias futuras podem trazer desafios adicionais, como a complexidade do design e a necessidade de recursos adicionais. Portanto, é necessário realizar uma análise cuidadosa dos requisitos e restrições do sistema antes de implementar essas melhorias.
+
+
+Em resumo, as otimizações e melhorias futuras no design do algoritmo GCD em hardware são uma área de interesse contínua para estudantes de Engenharia de Computação. Com a combinação certa de conhecimento teórico e prático, é possível criar soluções eficientes e inovadoras que atendam às demandas cada vez maiores da computação moderna.
+
 
 \section{Conclusões}
 
