@@ -35,7 +35,7 @@ a modelagem dos módulos de controle e datapath em Verilog,
 e a simulação e validação do sistema.
 
 \vspace{0.5cm}
-\noindent\textbf{PALAVRAS-CHAVE}:
+\noindent\textbf{PALAVRAS-CHAVE}: 
 GCD; Greatest Common Divisor; Hardware Description Language; Control; Datapath.
 
 \vspace{0.5cm}
@@ -52,7 +52,8 @@ the modeling of control and datapath modules in Verilog,
 and the system simulation and validation.
 
 \vspace{0.5cm}
-\noindent\textbf{KEYWORDS}: GCD; Greatest Common Divisor; Hardware Description Language; Control; Datapath.
+\noindent\textbf{KEYWORDS}: 
+GCD; Greatest Common Divisor; Hardware Description Language; Control; Datapath;
 
 \section{Introdução}
 
@@ -62,7 +63,7 @@ Além disso, o GCD é amplamente empregado em sistemas de controle em hardware, 
 
 Este estudo busca explorar não apenas a teoria por trás do GCD, mas também sua aplicação prática por meio de implementações computacionais. A pesquisa foca no desenvolvimento de simulações em software, abordando desde a modelagem até a implementação.
 
-\section{Fundamentação Teórica}
+\section{Fundamentação Teórica} 
 % Esta seção deve apresentar os conceitos teóricos fundamentais para o entendimento do GCD e sua relevância em computação. Aborde os princípios matemáticos e as aplicações típicas do GCD.
 
 \subsection{Conceitos Básicos de GCD}
@@ -122,22 +123,100 @@ A operação de GCD é relevante em hardware porque ela pode ser implementada de
 
 Em resumo, o GCD é uma operação essencial em diversas áreas da computação, proporcionando uma base sólida para algoritmos criptográficos, técnicas de compressão de dados e a implementação eficiente de sistemas de controle em \textit{hardware} digital.
 
+
 \section{Desenho de Arquitetura}
-% Nesta seção, descreva a arquitetura utilizada para a implementação do GCD em hardware. Inclua uma visão geral dos módulos e suas interações.
+% Nesta seção, descreva a arquitetura utilizada para a implementação do GCD em hardware. 
+% Inclua uma visão geral dos módulos e suas interações.
+Esta seção descreve a arquitetura do sistema, 
+incluindo a partição em módulos de controle e datapath, 
+e os diagramas de blocos que ilustram a interação entre os componentes.
 
 \subsection{Partição em Módulos}
-% Detalhamento da divisão do projeto em módulos de Control e Datapath. Explicar o papel de cada módulo no sistema e como eles se comunicam. Pode incluir um diagrama de blocos para ilustrar.
+% Detalhamento da divisão do projeto em módulos de Control e Datapath. 
+% Explicar o papel de cada módulo no sistema e como eles se comunicam. 
+% Pode incluir um diagrama de blocos para ilustrar.
+A arquitetura do sistema GCD foi organizada em dois módulos principais: Control e Datapath.
+Esta divisão permite uma clara separação de responsabilidades, permite 
+uma maior modularidade, 
+facilita a implementação, manutenção e expansão do sistema.
+
+\subsubsection{Módulo de Controle}
+O módulo de Controle é responsável por gerenciar o fluxo de dados 
+entre os diferentes componentes do sistema e controlar as transições de estado. 
+Ele coordena as operações do Datapath com base nas condições de controle, 
+assegurando que as etapas do cálculo do GCD sejam executadas na ordem correta. 
+Este módulo inclui uma Máquina de Estados Finitos (FSM), a qual será discutida posteriormente,
+que determina a sequência de operações, incluindo a inicialização, 
+execução do cálculo e término.
+
+\subsubsection{Módulo Datapath}
+O Datapath realiza as operações aritméticas necessárias para o cálculo do GCD, 
+como subtrações e comparações entre os valores de entrada. 
+Este módulo contém registradores, multiplexadores, e a unidade de subtração, 
+que juntos formam o núcleo da operação matemática. 
+A eficiência do Datapath é crítica para o desempenho global do sistema, 
+uma vez que ele executa as operações fundamentais repetidamente até 
+que o resultado seja obtido.
+
 
 \subsection{Diagramas de Blocos}
-% Apresentar diagramas de blocos que representem a arquitetura do GCD, mostrando como os diferentes componentes se conectam e interagem. Explicar o fluxo de dados entre os módulos.
+% Apresentar diagramas de blocos que representem a arquitetura do GCD, 
+% mostrando como os diferentes componentes se conectam e interagem. 
+% Explicar o fluxo de dados entre os módulos.
+O diagrama de bloco na Figura \ref{fig:top_level} 
+ilustra a arquitetura de nível superior do sistema GCD, 
+apresentando todas as entradas e saídas em um único bloco. 
+Este diagrama de blocos demonstra como os módulos de 
+Controle e Datapath estão interconectados e como o fluxo de dados é gerenciado entre eles. 
 
+\begin{figure}[ht]
+    \centering
+    \caption{Diagrama de Blocos do Sistema GCD}
+    \includegraphics[width=15cm,angle=0]{imgs/diagram_block_top_level.png}
+    \\\textbf{Fonte:} \cite{cse_taylor_michael}
+    \label{fig:top_level}
+\end{figure}
+
+O diagrama de blocos na Figura \ref{fig:diagram_block} ilustra como os componentes principais 
+do sistema GCD se interconectam. 
+
+\begin{figure}[ht]
+    \centering
+    \caption{Diagrama de Blocos do Sistema GCD}
+    \includegraphics[width=17cm,angle=0]{imgs/diagram_block_control_datapath.png}
+    \\\textbf{Fonte:} \cite{cse_taylor_michael}
+    \label{fig:diagram_block}
+\end{figure}
+
+O Datapath inclui os registradores, multiplexadores e a unidade de subtração, 
+enquanto o Control FSM gerencia as operações com base nos sinais de controle.
+
+\clearpage
 \section{Desenvolvimento e Implementação}
 
-Os materiais e métodos utilizados no desenvolvimento da pesquisa incluem a descrição do algoritmo em C, a modelagem dos módulos de controle e datapath em Verilog, e a simulação utilizando o ambiente Intel QuestaSim.
+Os materiais e métodos utilizados no desenvolvimento da pesquisa 
+incluem a descrição do algoritmo em C e
+a modelagem dos módulos de controle e datapath em Verilog.
+Além da simulação utilizando o ambiente Intel Quartus.
 
 \subsection{Descrição do Algoritmo em C}
 
-O algoritmo para cálculo do GCD pode ser implementado de diversas maneiras. Abaixo, apresentamos uma implementação em linguagem C:
+O código a seguir é uma implementação da função GCD (Greatest Common Divisor - Maior Divisor Comum). 
+Essa função calcula o maior divisor comum entre dois números inteiros.
+
+A função GCD recebe dois parâmetros: inA e inB, 
+que representam os dois números inteiros para os quais 
+queremos calcular o maior divisor comum.
+
+O código utiliza um algoritmo chamado "algoritmo de Euclides" 
+para calcular o maior divisor comum. 
+O algoritmo de Euclides é baseado na observação de que 
+o maior divisor comum entre dois números não muda 
+se o menor número for subtraído do maior número repetidamente 
+até que um dos números seja igual a zero.
+
+O algoritmo para cálculo do GCD pode ser implementado de diversas maneiras. 
+Abaixo, apresentamos uma implementação em linguagem C:
 
 \begin{verbatim}
 int GCD(int inA, int inB) {
@@ -160,11 +239,49 @@ int GCD(int inA, int inB) {
 }
 \end{verbatim}
 
+
+Aqui está uma explicação passo a passo do funcionamento do código:
+
+\begin{enumerate}
+    \item O código declara algumas variáveis locais: \begin{verbatim}swap\end{verbatim}, \begin{verbatim}done\end{verbatim}, \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim}.
+    \begin{verbatim}swap\end{verbatim} é usada para trocar os valores de \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim} quando necessário.
+    \begin{verbatim}done\end{verbatim} é uma variável de controle que indica se o cálculo do maior divisor comum está concluído.
+    \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim} são inicializadas com os valores dos parâmetros \begin{verbatim}inA\end{verbatim} e \begin{verbatim}inB\end{verbatim}, respectivamente.
+    \item O código entra em um loop \begin{verbatim}while\end{verbatim} que continua até que a variável \begin{verbatim}done\end{verbatim} seja igual a 1.
+    \item O loop é usado para realizar as iterações necessárias para calcular o maior divisor comum.
+    \item Dentro do loop, há uma estrutura \begin{verbatim}if-else\end{verbatim} que verifica três condições:
+    \begin{enumerate}
+        \item Se \begin{verbatim}A\end{verbatim} for menor que \begin{verbatim}B\end{verbatim}, os valores de \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim} são trocados usando a variável \begin{verbatim}swap\end{verbatim}. Isso garante que \begin{verbatim}A\end{verbatim} seja sempre o maior número.
+        \item Se \begin{verbatim}B\end{verbatim} for diferente de zero, \begin{verbatim}A\end{verbatim} é atualizado para \begin{verbatim}A - B\end{verbatim}. Isso realiza a subtração repetida até que um dos números seja igual a zero.
+        \item Se nenhuma das condições anteriores for verdadeira, significa que o cálculo do maior divisor comum está concluído e a variável \begin{verbatim}done\end{verbatim} é definida como 1 para sair do loop.
+    \end{enumerate}
+    \item Após o loop, o código retorna o valor de \begin{verbatim}A\end{verbatim}, que representa o maior divisor comum entre os números \begin{verbatim}inA\end{verbatim} e \begin{verbatim}inB\end{verbatim}.
+\end{enumerate}
+
+Por exemplo, se chamarmos a função GCD(24, 36), o algoritmo de Euclides será aplicado da seguinte maneira:
+
+\begin{enumerate}
+    \item Na primeira iteração, \begin{verbatim}A\end{verbatim} é atualizado para 36 e \begin{verbatim}B\end{verbatim} é atualizado para 24.
+    \item Na segunda iteração, \begin{verbatim}A\end{verbatim} é atualizado para 12 e \begin{verbatim}B\end{verbatim} é atualizado para 24.
+    \item Na terceira iteração, \begin{verbatim}A\end{verbatim} é atualizado para 12 e \begin{verbatim}B\end{verbatim} é atualizado para 12.
+    \item Na quarta iteração, \begin{verbatim}A\end{verbatim} é atualizado para 0 e \begin{verbatim}B\end{verbatim} é atualizado para 12.
+    \item Como \begin{verbatim}B\end{verbatim} é igual a zero, o cálculo do maior divisor comum está concluído e o valor retornado é 12.
+\end{enumerate}
+
+
 \subsection{Modelagem em Verilog}
 
-A implementação do GCD em hardware envolve a criação de módulos para o controle e o datapath. O datapath lida com a movimentação e transformação dos dados, enquanto o módulo de controle gerencia as operações de controle.
+A implementação do GCD em hardware envolve a 
+criação de módulos para o controle e o datapath. 
+O datapath lida com a movimentação e transformação dos dados, 
+enquanto o módulo de controle gerencia as operações de controle.
 
 \subsubsection{Módulo Datapath}
+
+O código a seguir é um exemplo de um módulo em Verilog 
+que implementa o datapath para um algoritmo de cálculo do 
+Máximo Divisor Comum (GCD - Greatest Common Divisor). 
+
 \begin{verbatim}
 module GCDdatapath#( parameter W=16 )
 (
@@ -187,30 +304,34 @@ module GCDdatapath#( parameter W=16 )
     wire [W-1:0] A_mux_out;
     wire [W-1:0] B_mux_out;
 
-    Mux3#(W) A_mux
-    (.in0 (operand_A),
-    .in1 (sub_out),
-    .in2 (B),
-    .sel (A_sel),
-    .out (A_mux_out) );
+    Mux3#(W) A_mux(
+        .in0 (operand_A),
+        .in1 (sub_out),
+        .in2 (B),
+        .sel (A_sel),
+        .out (A_mux_out) 
+    );
 
-    register#(W) A_reg
-    (.clk (clk),
-    .d (A_mux_out),
-    .en (A_ld),
-    .q (A) );
+    register#(W) A_reg (
+        .clk (clk),
+        .d (A_mux_out),
+        .en (A_ld),
+        .q (A) 
+    );
 
-    Mux2#(W) B_mux
-    (.in0 (A),
-    .in1 (operand_B),
-    .sel (B_sel),
-    .out (B_mux_out) );
+    Mux2#(W) B_mux (
+        .in0 (A),
+        .in1 (operand_B),
+        .sel (B_sel),
+        .out (B_mux_out) 
+    );
 
-    register#(W) B_reg
-    (.clk (clk),
-    .d (B_mux_out),
-    .en (B_ld),
-    .q (B) );
+    register#(W) B_reg (
+        .clk (clk),
+        .d (B_mux_out),
+        .en (B_ld),
+        .q (B) 
+    );
 
     assign B_zero = (B==0);
     assign A_lt_B = (A < B);
@@ -224,6 +345,53 @@ module GCDdatapath#( parameter W=16 )
     assign B_mux_chk = B_mux_out;
 endmodule
 \end{verbatim}
+
+
+A seguir, o funcionamento do código passo a passo:
+
+O módulo GCDdatapath recebe alguns parâmetros, 
+sendo o principal deles W, 
+que define o tamanho dos operandos e do resultado em bits.
+
+O módulo possui várias entradas e saídas, incluindo:
+
+\begin{itemize}
+    \item \begin{verbatim}clk\end{verbatim}: um sinal de clock para sincronizar as operações.
+    \item \begin{verbatim}operand_A\end{verbatim} e \begin{verbatim}operand_B\end{verbatim}: os operandos de entrada para o cálculo do GCD.
+    \item \begin{verbatim}result_data\end{verbatim}: o resultado do cálculo do GCD.
+    \item \begin{verbatim}A_ld\end{verbatim} e \begin{verbatim}B_ld\end{verbatim}: sinais de controle para carregar os operandos A e B.
+    \item \begin{verbatim}A_sel\end{verbatim} e \begin{verbatim}B_sel\end{verbatim}: sinais de seleção para escolher entre os operandos A e B.
+    \item \begin{verbatim}B_zero\end{verbatim}: um sinal indicando se o operando B é igual a zero.
+    \item \begin{verbatim}A_lt_B\end{verbatim}: um sinal indicando se o operando A é menor que o operando B.
+    \item \begin{verbatim}A_chk\end{verbatim}, \begin{verbatim}B_chk\end{verbatim}, \begin{verbatim}sub_chk\end{verbatim}, \begin{verbatim}A_mux_chk\end{verbatim} e \begin{verbatim}B_mux_chk\end{verbatim}: sinais de depuração para verificar os valores internos do datapath.
+\end{itemize}
+
+
+O módulo possui várias fiações (wires) para conectar os componentes internos:
+
+\begin{verbatim}A, B, sub_out, A_mux_out\end{verbatim} e \begin{verbatim}B_mux_out\end{verbatim}: fiações para transportar os valores dos operandos e resultados intermediários.
+
+O módulo utiliza vários componentes internos para realizar as operações do datapath:
+
+\begin{itemize}
+    \item \begin{verbatim}Mux3#(W) A_mux\end{verbatim}: um multiplexador de 3 entradas que seleciona entre o operando A, o resultado da subtração e o operando B, com base no sinal de seleção \begin{verbatim}A_sel\end{verbatim}. O resultado é armazenado em \begin{verbatim}A_mux_out\end{verbatim}.
+    \item \begin{verbatim}register#(W) A_reg\end{verbatim}: um registrador que armazena o valor de \begin{verbatim}A_mux_out\end{verbatim} e o atualiza no sinal de clock \begin{verbatim}clk\end{verbatim} quando o sinal de controle \begin{verbatim}A_ld\end{verbatim} está ativo. O valor atualizado é armazenado em \begin{verbatim}A\end{verbatim}.
+    \item \begin{verbatim}Mux2#(W) B_mux\end{verbatim}: um multiplexador de 2 entradas que seleciona entre o valor atualizado de \begin{verbatim}A\end{verbatim} e o operando \begin{verbatim}B\end{verbatim}, com base no sinal de seleção \begin{verbatim}B_sel\end{verbatim}. O resultado é armazenado em \begin{verbatim}B_mux_out\end{verbatim}.
+    \item \begin{verbatim}register#(W) B_reg\end{verbatim}: um registrador que armazena o valor de \begin{verbatim}B_mux_out\end{verbatim} e o atualiza no sinal de clock \begin{verbatim}clk\end{verbatim} quando o sinal de controle \begin{verbatim}B_ld\end{verbatim} está ativo. O valor atualizado é armazenado em \begin{verbatim}B\end{verbatim}.
+\end{itemize}
+
+As atribuições assign são usadas para definir os valores das saídas do módulo:
+
+\begin{itemize}
+    \item \begin{verbatim}B_zero\end{verbatim} é atribuído como verdadeiro se o valor de \begin{verbatim}B\end{verbatim} for igual a zero.
+    \item \begin{verbatim}A_lt_B\end{verbatim} é atribuído como verdadeiro se o valor de \begin{verbatim}A\end{verbatim} for menor que o valor de \begin{verbatim}B\end{verbatim}.
+    \item \begin{verbatim}sub_out\end{verbatim} é atribuído como a diferença entre \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim}.
+    \item \begin{verbatim}result_data\end{verbatim} é atribuído como o valor de \begin{verbatim}A\end{verbatim}.
+    \item Os sinais de depuração \begin{verbatim}A_chk\end{verbatim}, \begin{verbatim}B_chk\end{verbatim}, \begin{verbatim}sub_chk\end{verbatim}, \begin{verbatim}A_mux_chk\end{verbatim} e \begin{verbatim}B_mux_chk\end{verbatim} são atribuídos aos respectivos valores internos do datapath.
+\end{itemize}
+
+O módulo GCDdatapath encapsula todas essas operações e fiações para formar um datapath completo para o cálculo do GCD.
+
 
 \subsubsection{Módulo Controle}
 \begin{verbatim}
@@ -318,7 +486,7 @@ module GCDcontrol(
         endcase
     end
 
-    assign State = CurrentState; 
+    assign State = CurrentState;
 endmodule
 \end{verbatim}
 

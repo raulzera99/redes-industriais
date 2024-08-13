@@ -25,4 +25,12 @@
 \abntrefinfo{Skiena}{SKIENA}{2008}
 {SKIENA, S.~S. \emph{The Algorithm Design Manual}. 2nd. ed. [S.l.]: Springer, 2008.}
 
+\bibitem[Taylor 2019]{cse_taylor_michael}
+\abntrefinfo{Taylor}{TAYLOR}{2019}
+{TAYLOR, M.~B. \emph{CSE 141L: Introduction to Computer Architecture
+  Laboratory}.
+[S.l.], 2019. Dispon{\'\i}vel em:
+  \url{https://cseweb.ucsd.edu/classes/sp10/cse141L/pdf/02/02-Verilog2.pdf}.
+  Acesso em: 13 Ago. 2024.}
+
 \end{thebibliography}
