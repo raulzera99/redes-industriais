@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex main"] 1723562365 "main.aux" "main.bbl" "main" 1723562368 0
+["bibtex main"] 1723562912 "main.aux" "main.bbl" "main" 1723562913 2
   "./bibliografia.bib" 1723555907 2721 2aec3bae3272469eab0e27c607d4d1dd ""
   "c:/texlive/2023/texmf-dist/bibtex/bib/abntex2/abntex2-options.bib" 1697498087 5396 4eb260dac60f150ae608d45252853090 ""
   "c:/texlive/2023/texmf-dist/bibtex/bst/abntex2/abntex2-alf.bst" 1697498087 60064 0819ac8568f9a482510a46e3a8a6f605 ""
-  "main.aux" 1723562366 4621 650ab3776b023b26f89e8629397cefd2 "pdflatex"
+  "main.aux" 1723562912 34 3985256e7290058c681f74d7a3565a19 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1723562365 "c:/Users/higor/Desktop/circuitos/greatest-common-divisor-hardware/main.tex" "main.pdf" "main" 1723562368 0
-  "c:/Users/higor/Desktop/circuitos/greatest-common-divisor-hardware/main.tex" 1723562362 26671 b65aca958bbf86987cc3f5778fbb2462 ""
+["pdflatex"] 1723562909 "c:/Users/higor/Desktop/circuitos/greatest-common-divisor-hardware/main.tex" "main.pdf" "main" 1723562912 0
+  "c:/Users/higor/Desktop/circuitos/greatest-common-divisor-hardware/main.tex" 1723562908 27121 6245b915e14bfa73c4c4eadd1bdc7941 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1697503606 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1697503606 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1697507332 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -112,10 +112,10 @@
   "c:/texlive/2023/texmf.cnf" 1697518016 713 e69b156964470283e0530f5060668171 ""
   "cabecalho.tex" 1723555907 3615 09f10e4eef07e9199c315a7a1e180e2f ""
   "imgs/logo_ifsp.png" 1723555907 4070 64c56fc9e5b78266e59be2ea043940ad ""
-  "main.aux" 1723562366 4621 650ab3776b023b26f89e8629397cefd2 "pdflatex"
-  "main.bbl" 1723562365 1291 5bb4f9c801f7cac3bd5e1b3b6f5b1359 "bibtex main"
-  "main.tex" 1723562362 26671 b65aca958bbf86987cc3f5778fbb2462 ""
-  "main.toc" 1723562366 2182 ac1e7559aaa2c250fec4c0a57a74940b "pdflatex"
+  "main.aux" 1723562912 34 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "main.bbl" 1723562913 0 d41d8cd98f00b204e9800998ecf8427e "bibtex main"
+  "main.tex" 1723562908 27121 6245b915e14bfa73c4c4eadd1bdc7941 ""
+  "main.toc" 0 -1 0 "pdflatex"
   "preambulo.tex" 1723555907 1656 f5421a0941cc375ea62777ec6abffafc ""
   (generated)
   "main.aux"
