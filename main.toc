@@ -11,21 +11,21 @@
 \contentsline {subsection}{\numberline {3.2}Diagramas de Blocos}{6}{}%
 \contentsline {section}{\numberline {4}Desenvolvimento e Implementação}{8}{}%
 \contentsline {subsection}{\numberline {4.1}Descrição do Algoritmo em C}{8}{}%
-\contentsline {subsection}{\numberline {4.2}Modelagem em Verilog}{12}{}%
-\contentsline {subsubsection}{\numberline {4.2.1}Módulo Datapath}{12}{}%
-\contentsline {subsubsection}{\numberline {4.2.2}Módulo Controle}{17}{}%
-\contentsline {section}{\numberline {5}Máquina de Estados Finitos (FSM)}{19}{}%
-\contentsline {subsection}{\numberline {5.1}Descrição dos Estados}{19}{}%
-\contentsline {subsection}{\numberline {5.2}Implementação da FSM}{19}{}%
-\contentsline {section}{\numberline {6}Simulações e Verificação}{19}{}%
-\contentsline {subsection}{\numberline {6.1}Simulação do módulo GCD}{19}{}%
-\contentsline {subsection}{\numberline {6.2}Ambiente de Simulação}{20}{}%
-\contentsline {subsection}{\numberline {6.3}Resultados da Simulação}{20}{}%
-\contentsline {section}{\numberline {7}Otimizações e Melhorias Futuras}{20}{}%
-\contentsline {subsection}{\numberline {7.1}Otimização do Datapath}{20}{}%
-\contentsline {subsubsection}{\numberline {7.1.1}Implemetação do Pipelining}{20}{}%
-\contentsline {subsubsection}{\numberline {7.1.2}Benefícios do Pipelining}{21}{}%
-\contentsline {paragraph}{Conclusão :}{21}{}%
-\contentsline {subsection}{\numberline {7.2}Expansão do Design para Sistemas Maiores}{21}{}%
-\contentsline {section}{\numberline {8}Discussão sobre Integração com Sistemas Maiores e Otimização do Datapath}{22}{}%
-\contentsline {section}{\numberline {9}Conclusões}{22}{}%
+\contentsline {subsection}{\numberline {4.2}Modelagem em Verilog}{9}{}%
+\contentsline {subsubsection}{\numberline {4.2.1}Módulo Datapath}{9}{}%
+\contentsline {subsubsection}{\numberline {4.2.2}Módulo Controle}{12}{}%
+\contentsline {section}{\numberline {5}Máquina de Estados Finitos (FSM)}{15}{}%
+\contentsline {subsection}{\numberline {5.1}Descrição dos Estados}{15}{}%
+\contentsline {subsection}{\numberline {5.2}Implementação da FSM}{15}{}%
+\contentsline {section}{\numberline {6}Simulações e Verificação}{15}{}%
+\contentsline {subsection}{\numberline {6.1}Simulação do módulo GCD}{15}{}%
+\contentsline {subsection}{\numberline {6.2}Ambiente de Simulação}{15}{}%
+\contentsline {subsection}{\numberline {6.3}Resultados da Simulação}{15}{}%
+\contentsline {section}{\numberline {7}Otimizações e Melhorias Futuras}{15}{}%
+\contentsline {subsection}{\numberline {7.1}Otimização do Datapath}{15}{}%
+\contentsline {subsubsection}{\numberline {7.1.1}Implemetação do Pipelining}{15}{}%
+\contentsline {subsubsection}{\numberline {7.1.2}Benefícios do Pipelining}{16}{}%
+\contentsline {paragraph}{Conclusão :}{17}{}%
+\contentsline {subsection}{\numberline {7.2}Expansão do Design para Sistemas Maiores}{17}{}%
+\contentsline {section}{\numberline {8}Discussão sobre Integração com Sistemas Maiores e Otimização do Datapath}{17}{}%
+\contentsline {section}{\numberline {9}Conclusões}{17}{}%
