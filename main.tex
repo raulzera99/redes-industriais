@@ -241,33 +241,28 @@ int GCD(int inA, int inB) {
 
 
 Aqui está uma explicação passo a passo do funcionamento do código:
-
 \begin{enumerate}
-    \item O código declara algumas variáveis locais: \begin{verbatim}swap\end{verbatim}, \begin{verbatim}done\end{verbatim}, \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim}.
-          \begin{verbatim}swap\end{verbatim} é usada para trocar os valores de \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim} quando necessário.
-          \begin{verbatim}done\end{verbatim} é uma variável de controle que indica se o cálculo do maior divisor comum está concluído.
-          \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim} são inicializadas com os valores dos parâmetros \begin{verbatim}inA\end{verbatim} e \begin{verbatim}inB\end{verbatim}, respectivamente.
-    \item O código entra em um loop \begin{verbatim}while\end{verbatim} que continua até que a variável \begin{verbatim}done\end{verbatim} seja igual a 1.
+    \item O código declara algumas variáveis locais: \texttt{swap}, \texttt{done}, \texttt{A} e \texttt{B}. \texttt{swap} é usada para trocar os valores de \texttt{A} e \texttt{B} quando necessário. \texttt{done} é uma variável de controle que indica se o cálculo do maior divisor comum está concluído. \texttt{A} e \texttt{B} são inicializadas com os valores dos parâmetros \texttt{inA} e \texttt{inB}, respectivamente.
+    \item O código entra em um loop \texttt{while} que continua até que a variável \texttt{done} seja igual a 1.
     \item O loop é usado para realizar as iterações necessárias para calcular o maior divisor comum.
-    \item Dentro do loop, há uma estrutura \begin{verbatim}if-else\end{verbatim} que verifica três condições:
-          \begin{enumerate}
-              \item Se \begin{verbatim}A\end{verbatim} for menor que \begin{verbatim}B\end{verbatim}, os valores de \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim} são trocados usando a variável \begin{verbatim}swap\end{verbatim}. Isso garante que \begin{verbatim}A\end{verbatim} seja sempre o maior número.
-              \item Se \begin{verbatim}B\end{verbatim} for diferente de zero, \begin{verbatim}A\end{verbatim} é atualizado para \begin{verbatim}A - B\end{verbatim}. Isso realiza a subtração repetida até que um dos números seja igual a zero.
-              \item Se nenhuma das condições anteriores for verdadeira, significa que o cálculo do maior divisor comum está concluído e a variável \begin{verbatim}done\end{verbatim} é definida como 1 para sair do loop.
-          \end{enumerate}
-    \item Após o loop, o código retorna o valor de \begin{verbatim}A\end{verbatim}, que representa o maior divisor comum entre os números \begin{verbatim}inA\end{verbatim} e \begin{verbatim}inB\end{verbatim}.
+    \item Dentro do loop, há uma estrutura \texttt{if-else} que verifica três condições:
+    \begin{enumerate}
+        \item Se \texttt{A} for menor que \texttt{B}, os valores de \texttt{A} e \texttt{B} são trocados usando a variável \texttt{swap}. Isso garante que \texttt{A} seja sempre o maior número.
+        \item Se \texttt{B} for diferente de zero, \texttt{A} é atualizado para \texttt{A - B}. Isso realiza a subtração repetida até que um dos números seja igual a zero.
+        \item Se nenhuma das condições anteriores for verdadeira, significa que o cálculo do maior divisor comum está concluído e a variável \texttt{done} é definida como 1 para sair do loop.
+    \end{enumerate}
+    \item Após o loop, o código retorna o valor de \texttt{A}, que representa o maior divisor comum entre os números \texttt{inA} e \texttt{inB}.
 \end{enumerate}
 
 Por exemplo, se chamarmos a função GCD(24, 36), o algoritmo de Euclides será aplicado da seguinte maneira:
 
 \begin{enumerate}
-    \item Na primeira iteração, \begin{verbatim}A\end{verbatim} é atualizado para 36 e \begin{verbatim}B\end{verbatim} é atualizado para 24.
-    \item Na segunda iteração, \begin{verbatim}A\end{verbatim} é atualizado para 12 e \begin{verbatim}B\end{verbatim} é atualizado para 24.
-    \item Na terceira iteração, \begin{verbatim}A\end{verbatim} é atualizado para 12 e \begin{verbatim}B\end{verbatim} é atualizado para 12.
-    \item Na quarta iteração, \begin{verbatim}A\end{verbatim} é atualizado para 0 e \begin{verbatim}B\end{verbatim} é atualizado para 12.
-    \item Como \begin{verbatim}B\end{verbatim} é igual a zero, o cálculo do maior divisor comum está concluído e o valor retornado é 12.
+    \item Na primeira iteração, \texttt{A} é atualizado para 36 e \texttt{B} é atualizado para 24.
+    \item Na segunda iteração, \texttt{A} é atualizado para 12 e \texttt{B} é atualizado para 24.
+    \item Na terceira iteração, \texttt{A} é atualizado para 12 e \texttt{B} é atualizado para 12.
+    \item Na quarta iteração, \texttt{A} é atualizado para 0 e \texttt{B} é atualizado para 12.
+    \item Como \texttt{B} é igual a zero, o cálculo do maior divisor comum está concluído e o valor retornado é 12.
 \end{enumerate}
-
 
 \subsection{Modelagem em Verilog}
 
@@ -356,44 +351,48 @@ que define o tamanho dos operandos e do resultado em bits.
 O módulo possui várias entradas e saídas, incluindo:
 
 \begin{itemize}
-    \item \begin{verbatim}clk\end{verbatim}: um sinal de clock para sincronizar as operações.
-    \item \begin{verbatim}operand_A\end{verbatim} e \begin{verbatim}operand_B\end{verbatim}: os operandos de entrada para o cálculo do GCD.
-    \item \begin{verbatim}result_data\end{verbatim}: o resultado do cálculo do GCD.
-    \item \begin{verbatim}A_ld\end{verbatim} e \begin{verbatim}B_ld\end{verbatim}: sinais de controle para carregar os operandos A e B.
-    \item \begin{verbatim}A_sel\end{verbatim} e \begin{verbatim}B_sel\end{verbatim}: sinais de seleção para escolher entre os operandos A e B.
-    \item \begin{verbatim}B_zero\end{verbatim}: um sinal indicando se o operando B é igual a zero.
-    \item \begin{verbatim}A_lt_B\end{verbatim}: um sinal indicando se o operando A é menor que o operando B.
-    \item \begin{verbatim}A_chk\end{verbatim}, \begin{verbatim}B_chk\end{verbatim}, \begin{verbatim}sub_chk\end{verbatim}, \begin{verbatim}A_mux_chk\end{verbatim} e \begin{verbatim}B_mux_chk\end{verbatim}: sinais de depuração para verificar os valores internos do datapath.
+    \item \texttt{clk}: um sinal de clock para sincronizar as operações.
+    \item \texttt{operand\_A} e \texttt{operand\_B}: os operandos de entrada para o cálculo do GCD.
+    \item \texttt{result\_data}: o resultado do cálculo do GCD.
+    \item \texttt{A\_ld} e \texttt{B\_ld}: sinais de controle para carregar os operandos A e B.
+    \item \texttt{A\_sel} e \texttt{B\_sel}: sinais de seleção para escolher entre os operandos A e B.
+    \item \texttt{B\_zero}: um sinal indicando se o operando B é igual a zero.
+    \item \texttt{A\_lt\_B}: um sinal indicando se o operando A é menor que o operando B.
+    \item \texttt{A\_chk}, \texttt{B\_chk}, \texttt{sub\_chk}, \texttt{A\_mux\_chk} e \texttt{B\_mux\_chk}: sinais de depuração para verificar os valores internos do datapath.
 \end{itemize}
 
-
-O módulo possui várias fiações (wires) para conectar os componentes internos:
-
-\begin{verbatim}A, B, sub_out, A_mux_out\end{verbatim} e \begin{verbatim}B_mux_out\end{verbatim}: fiações para transportar os valores dos operandos e resultados intermediários.
+O módulo possui várias fiações (wires) para conectar os componentes internos: \texttt{A}, \texttt{B}, \texttt{sub\_out}, \texttt{A\_mux\_out} e \texttt{B\_mux\_out}, que transportam os valores dos operandos e resultados intermediários.
 
 O módulo utiliza vários componentes internos para realizar as operações do datapath:
 
 \begin{itemize}
-    \item \begin{verbatim}Mux3#(W) A_mux\end{verbatim}: um multiplexador de 3 entradas que seleciona entre o operando A, o resultado da subtração e o operando B, com base no sinal de seleção \begin{verbatim}A_sel\end{verbatim}. O resultado é armazenado em \begin{verbatim}A_mux_out\end{verbatim}.
-    \item \begin{verbatim}register#(W) A_reg\end{verbatim}: um registrador que armazena o valor de \begin{verbatim}A_mux_out\end{verbatim} e o atualiza no sinal de clock \begin{verbatim}clk\end{verbatim} quando o sinal de controle \begin{verbatim}A_ld\end{verbatim} está ativo. O valor atualizado é armazenado em \begin{verbatim}A\end{verbatim}.
-    \item \begin{verbatim}Mux2#(W) B_mux\end{verbatim}: um multiplexador de 2 entradas que seleciona entre o valor atualizado de \begin{verbatim}A\end{verbatim} e o operando \begin{verbatim}B\end{verbatim}, com base no sinal de seleção \begin{verbatim}B_sel\end{verbatim}. O resultado é armazenado em \begin{verbatim}B_mux_out\end{verbatim}.
-    \item \begin{verbatim}register#(W) B_reg\end{verbatim}: um registrador que armazena o valor de \begin{verbatim}B_mux_out\end{verbatim} e o atualiza no sinal de clock \begin{verbatim}clk\end{verbatim} quando o sinal de controle \begin{verbatim}B_ld\end{verbatim} está ativo. O valor atualizado é armazenado em \begin{verbatim}B\end{verbatim}.
+    \item \texttt{Mux3\#(W) A\_mux}: um multiplexador de 3 entradas que seleciona entre o operando A, o resultado da subtração e o operando B, com base no sinal de seleção \texttt{A\_sel}. O resultado é armazenado em \texttt{A\_mux\_out}.
+    \item \texttt{register\#(W) A\_reg}: um registrador que armazena o valor de \texttt{A\_mux\_out} e o atualiza no sinal de clock \texttt{clk} quando o sinal de controle \texttt{A\_ld} está ativo. O valor atualizado é armazenado em \texttt{A}.
+    \item \texttt{Mux2\#(W) B\_mux}: um multiplexador de 2 entradas que seleciona entre o valor atualizado de \texttt{A} e o operando \texttt{B}, com base no sinal de seleção \texttt{B\_sel}. O resultado é armazenado em \texttt{B\_mux\_out}.
+    \item \texttt{register\#(W) B\_reg}: um registrador que armazena o valor de \texttt{B\_mux\_out} e o atualiza no sinal de clock \texttt{clk} quando o sinal de controle \texttt{B\_ld} está ativo. O valor atualizado é armazenado em \texttt{B}.
 \end{itemize}
 
-As atribuições assign são usadas para definir os valores das saídas do módulo:
+As atribuições \texttt{assign} são usadas para definir os valores das saídas do módulo:
 
 \begin{itemize}
-    \item \begin{verbatim}B_zero\end{verbatim} é atribuído como verdadeiro se o valor de \begin{verbatim}B\end{verbatim} for igual a zero.
-    \item \begin{verbatim}A_lt_B\end{verbatim} é atribuído como verdadeiro se o valor de \begin{verbatim}A\end{verbatim} for menor que o valor de \begin{verbatim}B\end{verbatim}.
-    \item \begin{verbatim}sub_out\end{verbatim} é atribuído como a diferença entre \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim}.
-    \item \begin{verbatim}result_data\end{verbatim} é atribuído como o valor de \begin{verbatim}A\end{verbatim}.
-    \item Os sinais de depuração \begin{verbatim}A_chk\end{verbatim}, \begin{verbatim}B_chk\end{verbatim}, \begin{verbatim}sub_chk\end{verbatim}, \begin{verbatim}A_mux_chk\end{verbatim} e \begin{verbatim}B_mux_chk\end{verbatim} são atribuídos aos respectivos valores internos do datapath.
+    \item \texttt{B\_zero} é atribuído como verdadeiro se o valor de \texttt{B} for igual a zero.
+    \item \texttt{A\_lt\_B} é atribuído como verdadeiro se o valor de \texttt{A} for menor que o valor de \texttt{B}.
+    \item \texttt{sub\_out} é atribuído como a diferença entre \texttt{A} e \texttt{B}.
+    \item \texttt{result\_data} é atribuído como o valor de \texttt{A}.
+    \item Os sinais de depuração \texttt{A\_chk}, \texttt{B\_chk}, \texttt{sub\_chk}, \texttt{A\_mux\_chk} e \texttt{B\_mux\_chk} são atribuídos aos respectivos valores internos do datapath.
 \end{itemize}
+
 
 O módulo GCDdatapath encapsula todas essas operações e fiações para formar um datapath completo para o cálculo do GCD.
 
 
 \subsubsection{Módulo Controle}
+
+O código abaixo é a implementação de um módulo de controle em Verilog, 
+uma linguagem de descrição de hardware. 
+Esse módulo de controle é chamado "GCDcontrol" e é usado para 
+controlar o fluxo de um algoritmo de cálculo do maior divisor comum (GCD).
+
 \begin{verbatim}
 module GCDcontrol(
     input input_available,
@@ -489,6 +488,21 @@ module GCDcontrol(
     assign State = CurrentState;
 endmodule
 \end{verbatim}
+
+
+Analisando o código passo a passo:
+
+\begin{enumerate}
+    \item O módulo "GCDcontrol" possui várias entradas e saídas, que são definidas na lista de portas do módulo.
+    As entradas incluem \texttt{input\_available}, \texttt{clk}, \texttt{reset}, \texttt{B\_zero} e \texttt{A\_lt\_B}, enquanto as saídas incluem \texttt{idle}, \texttt{A\_ld}, \texttt{B\_sel}, \texttt{B\_ld}, \texttt{A\_sel}, \texttt{result\_rdy} e \texttt{State}.
+    \item O módulo também define alguns parâmetros locais, como os nomes dos estados e as constantes para os seletores de multiplexadores.
+    \item O módulo possui duas variáveis de estado, \texttt{CurrentState} e \texttt{NextState}, que são atualizadas em um bloco \texttt{always} sensível à borda de subida do sinal de clock ou de reset.
+    \item Em seguida, há um bloco \texttt{always} sensível ao valor de \texttt{CurrentState}, que determina o próximo estado com base no estado atual. O próximo estado é atribuído à variável \texttt{NextState} usando uma estrutura \texttt{case} que verifica o valor de \texttt{CurrentState} e toma decisões com base nesse valor.
+    \item O próximo bloco \texttt{always} é sensível a todas as mudanças de sinal e é usado para definir os sinais de controle com base no estado atual. Ele define os valores dos sinais \texttt{A\_sel}, \texttt{A\_ld}, \texttt{B\_sel}, \texttt{B\_ld}, \texttt{idle} e \texttt{result\_rdy} com base no valor de \texttt{CurrentState}. Novamente, uma estrutura \texttt{case} é usada para tomar decisões com base no estado atual.
+    \item Por fim, o sinal \texttt{State} é atribuído ao valor de \texttt{CurrentState} usando a declaração \texttt{assign}.
+\end{enumerate}
+
+Em resumo, esse módulo de controle implementa a lógica para controlar o fluxo de um algoritmo de cálculo do maior divisor comum. Ele define os estados do algoritmo e os sinais de controle necessários para executar as operações corretas em cada estado.
 
 \section{Máquina de Estados Finitos (FSM)}
 % Nesta seção, discuta a FSM utilizada para controlar o Datapath.
@@ -695,14 +709,14 @@ A simulação foi conduzida utilizando o Software Quartus, que é amplamente uti
 \subsection{Resultados da Simulação}
 % Apresentar os resultados obtidos durante a simulação. Incluir gráficos ou capturas de tela que mostrem a operação do GCD. Discutir se os resultados atenderam às expectativas e os objetivos do projeto.
 
-A captura de tela fornecida (Figura \ref{simlacao_gcd}) mostra a forma de onda gerada durante a simulação no Quartus.
+A captura de tela fornecida (Figura \ref{simulacao_gcd}) mostra a forma de onda gerada durante a simulação no Quartus.
 
 \begin{figure}[ht]
     \centering
     \caption{Simulação do Módulo de Controle GCD}
     \includegraphics[width=15cm,angle=0]{imgs/simulacao_gcd_quartus.png}
     \\\textbf{Fonte:} Elaborado pelos autores
-    \label{simlacao_gcd}
+    \label{simulacao_gcd}
 \end{figure}
 
 A análise dos resultados da simulação pode ser dividida em várias fases, conforme mostrado na forma de onda simulada. Cada fase representa um conjunto de operações e transições de estado na FSM:
@@ -760,7 +774,7 @@ Para o algoritmo GCD, que geralmente é implementado usando o Algoritmo de Eucli
 A implementação do pipelining para o GCD pode ser feita da seguinte maneira:
 
 \begin{itemize}
-    \item \textbf{Pipelide de Estágios}: Cada estágio do pipeline pode ser otimizado para realizar sua tarefa específica simultaneamente com outros estágios. Por exemplo, enquanto um estágio calcula o resto, outro pode estar atualizando os valores ou verificando a condição de parada.
+    \item \textbf{Pipeline de Estágios}: Cada estágio do pipeline pode ser otimizado para realizar sua tarefa específica simultaneamente com outros estágios. Por exemplo, enquanto um estágio calcula o resto, outro pode estar atualizando os valores ou verificando a condição de parada.
     \item \textbf{Buffer de Pipeline}: Adicionar buffers entre os estágios para armazenar dados temporários e permitir que o processamento continue sem interrupções.
     \item \textbf{Controle de Fluxo}: Implementar mecanismos de controle para gerenciar a sincronização entre os estágios e garantir que cada estágio receba os dados no momento certo \cite{Patterson2013}.
 \end{itemize}
@@ -829,7 +843,11 @@ Em resumo, as otimizações e melhorias futuras no design do algoritmo GCD em ha
 
 \section{Conclusões}
 
-Neste artigo, apresentamos a implementação do algoritmo GCD em hardware, detalhando a modelagem dos módulos de controle e datapath em Verilog. A simulação mostrou que a abordagem utilizada é eficiente e atende aos requisitos do projeto. Futuras melhorias podem incluir a otimização do datapath e a integração com outros módulos de um sistema maior.
+Neste artigo, apresentamos a implementação do algoritmo GCD em hardware, detalhando a modelagem dos módulos de controle e datapath em Verilog. A simulação mostrou que a abordagem utilizada é eficiente e atende aos requisitos do projeto. Em conclusão, a implementação do Algoritmo de Euclides para o cálculo do GCD exemplifica a intersecção eficaz entre teoria matemática e aplicações práticas em hardware digital. Através do uso de registradores, multiplexadores e unidades aritméticas, o algoritmo é traduzido em circuitos de controle e datapath que executam operações iterativas de forma eficiente.
+Esse processo é fundamental para diversos contextos, incluindo criptografia, compressão de dados e controle de hardware, demonstrando a versatilidade e a importância do GCD em sistemas computacionais modernos. A clareza na separação entre os módulos de controle e datapath não só facilita a implementação e manutenção do sistema, mas também otimiza seu desempenho, especialmente em aplicações que demandam alta velocidade e economia de recursos. As melhorias propostas, como a implementação do pipelining e a otimização do datapath, revelam o potencial para aumentar ainda mais a eficiência do cálculo do GDC. O pipelining, ao permitir que várias operações ocorram simultaneamente, pode reduzir significativamente o tempo de execução e aumentar a capacidade de processamento do sistema.
+Essas melhorias, juntamente com a possibilidade de expandir o design para suportar sistemas maiores e operações mais complexas, apontam para um caminho promissor na evolução do design de hardware digital. 
+
+O desafio, entretanto, reside na necessidade de equilibrar a complexidade do design com os recursos disponíveis, garantindo que as soluções sejam não apenas eficientes, mas também praticas e sustentáveis. Com uma análise cuidadosa das restrições e demandas do sistema, é possível criar designs inovadores que atendam às crescentes necessidades da computação moderna, proporcionando um desempenho superior e uma maior eficiência energética. Em suma, as otimizações no algoritmo GCD e sua integração em sistemas maiores representam uma área de estudo contínua e vital para o avanço da engenharia da computação.
 
 %Referências Bibliográficas
 \bibliography{bibliografia.bib}
