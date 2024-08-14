@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.3.4)  13 AUG 2024 21:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.3.4)  14 AUG 2024 02:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -483,29 +483,44 @@ File: imgs/diagram_block_control_datapath.png Graphic file (type png)
 Package pdftex.def Info: imgs/diagram_block_control_datapath.png  used on input line 186.
 (pdftex.def)             Requested size: 483.69684pt x 281.0383pt.
  [6 <./imgs/diagram_block_top_level.png>] [7 <./imgs/diagram_block_control_datapath.png>]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 221.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 235.
  (C:\Users\raulp\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ) [8
 
-] [9] [10] [11] [12] [13] [14] [15] [16] (main.bbl) [17] (main.aux)
+] [9] [10] [11]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 417.
+ [12] [13]
+<imgs/state_machine_GCD.png, id=59, 174.6525pt x 196.3335pt>
+File: imgs/state_machine_GCD.png Graphic file (type png)
+<use imgs/state_machine_GCD.png>
+Package pdftex.def Info: imgs/state_machine_GCD.png  used on input line 660.
+(pdftex.def)             Requested size: 199.16928pt x 223.90639pt.
+ [14 <./imgs/state_machine_GCD.png>] [15] [16] [17]
+<imgs/simulacao_gcd_quartus.png, id=74, 738.3585pt x 353.52075pt>
+File: imgs/simulacao_gcd_quartus.png Graphic file (type png)
+<use imgs/simulacao_gcd_quartus.png>
+Package pdftex.def Info: imgs/simulacao_gcd_quartus.png  used on input line 856.
+(pdftex.def)             Requested size: 426.79134pt x 204.34631pt.
+ [18] [19 <./imgs/simulacao_gcd_quartus.png>] [20] [21] (main.bbl) [22] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 7359 strings out of 474824
- 117166 string characters out of 5750978
- 1936043 words of memory out of 5000000
- 29158 multiletter control sequences out of 15000+600000
- 570226 words of font info for 65 fonts, out of 8000000 for 9000
+ 7380 strings out of 474824
+ 117742 string characters out of 5750978
+ 1937043 words of memory out of 5000000
+ 29177 multiletter control sequences out of 15000+600000
+ 571272 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,13n,69p,769b,417s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\raulp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\raulp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\raulp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\raulp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\raulp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\raulp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk><C:/Users/raulp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/raulp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/raulp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/raulp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (17 pages, 287282 bytes).
+ 62i,13n,69p,887b,417s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\raulp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1095.pk> <C:\Users\raulp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1095.pk> <C:\Users\raulp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\raulp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\raulp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\raulp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\raulp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\raulp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk><C:/Users/raulp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/raulp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/raulp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/raulp/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (22 pages, 464385 bytes).
 PDF statistics:
- 433 PDF objects out of 1000 (max. 8388607)
+ 479 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

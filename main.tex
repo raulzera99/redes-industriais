@@ -191,6 +191,20 @@ do sistema GCD se interconectam.
 O Datapath inclui os registradores, multiplexadores e a unidade de subtração,
 enquanto o Control FSM gerencia as operações com base nos sinais de controle.
 
+% Por exemplo, se chamarmos a função GCD(24, 36), o módulo Datapath realizará as seguintes operações:
+% \begin{enumerate}
+%     \item Carregar os valores 24 e 36 nos registradores A e B.
+%     \item Utilizar o comparação aritmética \texttt{lt - "Less Than"} para verificar os valores de A e B.
+%     \item Utilizar os multiplexadores para selecionar os valores corretos com base no resultado da comparação.
+%     \item Subtrair o menor valor do maior valor até que um dos valores seja zero.
+%     \item Comparar os valores de A e B para determinar a ordem correta das operações.
+%     \item Subtrair o menor valor do maior valor até que um dos valores seja zero.
+%     \item Retornar o valor restante como o GCD.
+%     \item Atualizar o módulo de Controle com o resultado, gerando um sinal de saída para indicar a conclusão do cálculo.
+%     \item Aguardar a solicitação de um novo cálculo.
+%     \item Reiniciar o processo com novos valores de entrada.
+% \end{enumerate}
+
 \clearpage
 \section{Desenvolvimento e Implementação}
 
@@ -257,10 +271,12 @@ Aqui está uma explicação passo a passo do funcionamento do código:
 Por exemplo, se chamarmos a função GCD(24, 36), o algoritmo de Euclides será aplicado da seguinte maneira:
 
 \begin{enumerate}
-    \item Na primeira iteração, \texttt{A} é atualizado para 36 e \texttt{B} é atualizado para 24.
-    \item Na segunda iteração, \texttt{A} é atualizado para 12 e \texttt{B} é atualizado para 24.
-    \item Na terceira iteração, \texttt{A} é atualizado para 12 e \texttt{B} é atualizado para 12.
-    \item Na quarta iteração, \texttt{A} é atualizado para 0 e \texttt{B} é atualizado para 12.
+    \item Na primeira iteração, \texttt{A} é atualizado para 36 e \texttt{B} é atualizado para 24. (\texttt{swap})
+    \item Na segunda iteração, \texttt{A} é atualizado para 12 e \texttt{B} se mantém 24. 
+    \item Na terceira iteração, \texttt{A} é atualizado para 24 e \texttt{B} é atualizado para 12. (\texttt{swap})
+    \item Na quarta iteração, \texttt{A} é atualizado para 12 e \texttt{B} se mantém 12.
+    \item Na quinta iteração, \texttt{A} é atualizado para 0 e \texttt{B} se mantém 12.
+    \item Na sexta iteração, \texttt{A} é atualizado para 12 e \texttt{B} é atualizado para 0. (\texttt{swap})
     \item Como \texttt{B} é igual a zero, o cálculo do maior divisor comum está concluído e o valor retornado é 12.
 \end{enumerate}
 
@@ -385,122 +401,245 @@ As atribuições \texttt{assign} são usadas para definir os valores das saídas
 
 O módulo GCDdatapath encapsula todas essas operações e fiações para formar um datapath completo para o cálculo do GCD.
 
+Por exemplo, quando a função GCD(24, 36) é chamada, o cálculo é realizado dentro do datapath do sistema através das seguintes etapas:
+
+\begin{enumerate}
+    \item \textbf{Inicialização e Carregamento dos Valores:}
+    \begin{itemize}
+        \item \textbf{Ação:} Os valores de entrada 24 e 36 são carregados nos registradores \texttt{A} e \texttt{B} do datapath, respectivamente.
+        \item \textbf{Operação no Datapath:} 
+        \begin{itemize}
+            \item O módulo de Controle ativa os sinais \texttt{A\_ld} e \texttt{B\_ld} para carregar \texttt{operand\_A = 24} em \texttt{A} e \texttt{operand\_B = 36} em \texttt{B}.
+            \item O multiplexador \texttt{A\_mux} seleciona a entrada \texttt{operand\_A} e \texttt{B\_mux} seleciona \texttt{operand\_B}.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Comparação Inicial dos Valores (\texttt{A < B}):}
+    \begin{itemize}
+        \item \textbf{Ação:} O valor de \texttt{A} (24) é comparado com o valor de \texttt{B} (36) para determinar se é necessário realizar um swap.
+        \item \textbf{Operação no Datapath:} 
+        \begin{itemize}
+            \item A unidade de comparação \texttt{lt} avalia se \texttt{A} é menor que \texttt{B}.
+            \item Como \texttt{A < B} é verdadeiro, o sinal \texttt{A\_lt\_B} é ativado.
+            \item O módulo de Controle, ao detectar \texttt{A\_lt\_B}, ativa os sinais de seleção nos multiplexadores para trocar os valores de \texttt{A} e \texttt{B}.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Troca dos Valores (\texttt{A} e \texttt{B}):}
+    \begin{itemize}
+        \item \textbf{Ação:} O valor de \texttt{A} e \texttt{B} são trocados: \texttt{A} passa a ser 36 e \texttt{B} passa a ser 24.
+        \item \textbf{Operação no Datapath:} 
+        \begin{itemize}
+            \item O multiplexador \texttt{A\_mux} agora seleciona \texttt{B} como entrada para \texttt{A}.
+            \item O multiplexador \texttt{B\_mux} seleciona \texttt{A} como entrada para \texttt{B}.
+            \item Os valores são atualizados nos registradores: \texttt{A} é agora 36 e \texttt{B} é 24.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Subtração e Atualização dos Valores:}
+    \begin{itemize}
+        \item \textbf{Ação:} A unidade de subtração calcula a diferença entre \texttt{A} e \texttt{B}, ou seja, 36 - 24 = 12.
+        \item \textbf{Operação no Datapath:} 
+        \begin{itemize}
+            \item A unidade de subtração (\texttt{sub}) realiza a operação \texttt{A - B}.
+            \item O resultado da subtração (12) é alimentado de volta ao multiplexador \texttt{A\_mux} para ser carregado no registrador \texttt{A}.
+            \item \texttt{A} é atualizado para 12, enquanto \texttt{B} permanece 24.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Comparação e Repetição (Iteração 2):}
+    \begin{itemize}
+        \item \textbf{Ação:} Agora, \texttt{A} (12) é comparado com \texttt{B} (24).
+        \item \textbf{Operação no Datapath:} 
+        \begin{itemize}
+            \item Como \texttt{A < B} é verdadeiro novamente, ocorre outra troca de valores.
+            \item \texttt{A} se torna 24 e \texttt{B} se torna 12.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Subtração e Atualização dos Valores (Iteração 3):}
+    \begin{itemize}
+        \item \textbf{Ação:} A unidade de subtração calcula a diferença entre \texttt{A} e \texttt{B} novamente, 24 - 12 = 12.
+        \item \textbf{Operação no Datapath:} 
+        \begin{itemize}
+            \item O resultado (12) é carregado no registrador \texttt{A}.
+            \item \texttt{A} é atualizado para 12, enquanto \texttt{B} permanece 12.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Comparação (Iteração 4):}
+    \begin{itemize}
+        \item \textbf{Ação:} \texttt{A} (12) é comparado com \texttt{B} (12).
+        \item \textbf{Operação no Datapath:} 
+        \begin{itemize}
+            \item Como \texttt{A} e \texttt{B} são iguais, o datapath passa para a próxima etapa de subtração.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Subtração e Verificação da Condição de Término (Iteração 5):}
+    \begin{itemize}
+        \item \textbf{Ação:} A subtração entre \texttt{A} e \texttt{B} resulta em 12 - 12 = 0.
+        \item \textbf{Operação no Datapath:} 
+        \begin{itemize}
+            \item \texttt{A} é atualizado para 0.
+            \item O módulo de Controle verifica o sinal \texttt{B\_zero}, que indica que \texttt{B} chegou a 0.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Finalização e Geração do Resultado:}
+    \begin{itemize}
+        \item \textbf{Ação:} O valor de \texttt{A} (12) é o GCD, e o cálculo é concluído.
+        \item \textbf{Operação no Datapath:} 
+        \begin{itemize}
+            \item \texttt{result\_data} é atribuído ao valor de \texttt{A}, que é 12.
+            \item O módulo de Controle ativa o sinal \texttt{result\_rdy} para indicar que o resultado está pronto.
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Aguardar Nova Solicitação:}
+    \begin{itemize}
+        \item \textbf{Ação:} O sistema aguarda uma nova solicitação de cálculo.
+        \item \textbf{Operação no Datapath:} 
+        \begin{itemize}
+            \item O sistema volta ao estado inicial (\texttt{WAIT}), pronto para receber novos operandos e reiniciar o processo.
+        \end{itemize}
+    \end{itemize}
+\end{enumerate}
+
 
 \subsubsection{Módulo Controle}
 
-O código abaixo é a implementação de um módulo de controle em Verilog, 
-uma linguagem de descrição de hardware. 
-Esse módulo de controle é chamado "GCDcontrol" e é usado para 
-controlar o fluxo de um algoritmo de cálculo do maior divisor comum (GCD).
-
-\begin{verbatim}
-module GCDcontrol(
-    input input_available,
-    output reg idle,
-    input clk, reset,
-    output reg A_ld, B_sel, B_ld,
-    output reg [1:0] A_sel,
-    input B_zero, A_lt_B,
-    output reg result_rdy,
-    input result_taken,
-    output [1:0] State
-);
-
-    // States naming
-    localparam WAIT = 2'd0;
-    localparam CALC = 2'd1;
-    localparam DONE = 2'd2;
-
-    // Constants naming for A_mux selector
-    localparam A_SEL_IN = 2'b00;
-    localparam A_SEL_SUB = 2'b01;
-    localparam A_SEL_B = 2'b10;
-    localparam A_SEL_X = 2'b11;
-    // Constants naming for B_mux selector
-    localparam B_SEL_A = 1'b0;
-    localparam B_SEL_IN = 1'b1;
-    localparam B_SEL_X = 1'bx;
-
-    reg [1:0] CurrentState, NextState;
-
-    always @(posedge clk or posedge reset)  
-    begin 
-        if (reset) 
-            CurrentState <= WAIT;
-        else 
-            CurrentState <= NextState; 
-    end 
-
-    always @(CurrentState)
-    begin
-        // default is to stay in the same state
-        NextState <= CurrentState;
-        case ( CurrentState )
-            WAIT :
-                if ( input_available )
-                    NextState <= CALC;
-            CALC :
-                if ( B_zero )
-                    NextState <= DONE;
-            DONE :
-                if ( result_taken )
-                    NextState <= WAIT;
-        endcase
-    end 
-
-    always @( * )
-    begin
-        // Default control signals
-        A_sel <= A_SEL_X;
-        A_ld <= 1'b0;
-        B_sel <= B_SEL_X;
-        B_ld <= 1'b0;
-        idle <= 1'b0; 
-        result_rdy = 1'b0;
-
-        case ( CurrentState )
-            WAIT :
-                begin
-                    idle <= 1'b1; 
-                    if(input_available)begin
-                        A_sel <= A_SEL_IN;
-                        B_sel <= B_SEL_IN;
-                        A_ld <= 1'b1;   
-                        B_ld <= 1'b1;
-                    end
-                end
-            CALC :
-                if ( A_lt_B )begin
-                    A_sel <= A_SEL_B;
-                    B_sel <= B_SEL_A;
-                    A_ld <= 1'b1;
-                    B_ld <= 1'b1;
-                end
-                else if ( !B_zero )begin
-                    A_sel <= A_SEL_SUB;
-                    A_ld <= 1'b1;
-                end
-            DONE : 
-                result_rdy <= 1'b1;
-        endcase
-    end
-
-    assign State = CurrentState;
-endmodule
-\end{verbatim}
+O módulo de Controle é responsável por gerenciar o fluxo de dados entre 
+os diferentes componentes do sistema e 
+controlar as operações aritméticas no Datapath. 
+Ele utiliza sinais de controle para coordenar a sequência de operações 
+necessárias para o cálculo do GCD. 
+Esses sinais incluem \texttt{A\_ld}, \texttt{B\_ld}, \texttt{A\_sel} e \texttt{B\_sel},  
+que determinam quais valores são carregados nos registradores 
+e qual operação aritmética será realizada. 
+O módulo também monitora os sinais de entrada, 
+como \texttt{clk} e \texttt{reset}, para garantir que as operações sejam 
+executadas de forma sincronizada e que o sistema 
+possa ser reiniciado conforme necessário. 
+A interface entre o módulo de controle e o datapath 
+crucial para o desempenho do sistema, 
+garantindo que as operações ocorram na ordem correta 
+e que o GCD seja calculado eficientemente.
 
 
-Analisando o código passo a passo:
+% O código abaixo é a implementação de um módulo de controle em Verilog, 
+% uma linguagem de descrição de hardware. 
+% Esse módulo de controle é chamado "GCDcontrol" e é usado para 
+% controlar o fluxo de um algoritmo de cálculo do maior divisor comum (GCD).
 
-\begin{enumerate}
-    \item O módulo "GCDcontrol" possui várias entradas e saídas, que são definidas na lista de portas do módulo.
-    As entradas incluem \texttt{input\_available}, \texttt{clk}, \texttt{reset}, \texttt{B\_zero} e \texttt{A\_lt\_B}, enquanto as saídas incluem \texttt{idle}, \texttt{A\_ld}, \texttt{B\_sel}, \texttt{B\_ld}, \texttt{A\_sel}, \texttt{result\_rdy} e \texttt{State}.
-    \item O módulo também define alguns parâmetros locais, como os nomes dos estados e as constantes para os seletores de multiplexadores.
-    \item O módulo possui duas variáveis de estado, \texttt{CurrentState} e \texttt{NextState}, que são atualizadas em um bloco \texttt{always} sensível à borda de subida do sinal de clock ou de reset.
-    \item Em seguida, há um bloco \texttt{always} sensível ao valor de \texttt{CurrentState}, que determina o próximo estado com base no estado atual. O próximo estado é atribuído à variável \texttt{NextState} usando uma estrutura \texttt{case} que verifica o valor de \texttt{CurrentState} e toma decisões com base nesse valor.
-    \item O próximo bloco \texttt{always} é sensível a todas as mudanças de sinal e é usado para definir os sinais de controle com base no estado atual. Ele define os valores dos sinais \texttt{A\_sel}, \texttt{A\_ld}, \texttt{B\_sel}, \texttt{B\_ld}, \texttt{idle} e \texttt{result\_rdy} com base no valor de \texttt{CurrentState}. Novamente, uma estrutura \texttt{case} é usada para tomar decisões com base no estado atual.
-    \item Por fim, o sinal \texttt{State} é atribuído ao valor de \texttt{CurrentState} usando a declaração \texttt{assign}.
-\end{enumerate}
+% \begin{verbatim}
+% module GCDcontrol(
+%     input input_available,
+%     output reg idle,
+%     input clk, reset,
+%     output reg A_ld, B_sel, B_ld,
+%     output reg [1:0] A_sel,
+%     input B_zero, A_lt_B,
+%     output reg result_rdy,
+%     input result_taken,
+%     output [1:0] State
+% );
+
+%     // States naming
+%     localparam WAIT = 2'd0;
+%     localparam CALC = 2'd1;
+%     localparam DONE = 2'd2;
+
+%     // Constants naming for A_mux selector
+%     localparam A_SEL_IN = 2'b00;
+%     localparam A_SEL_SUB = 2'b01;
+%     localparam A_SEL_B = 2'b10;
+%     localparam A_SEL_X = 2'b11;
+%     // Constants naming for B_mux selector
+%     localparam B_SEL_A = 1'b0;
+%     localparam B_SEL_IN = 1'b1;
+%     localparam B_SEL_X = 1'bx;
+
+%     reg [1:0] CurrentState, NextState;
+
+%     always @(posedge clk or posedge reset)  
+%     begin 
+%         if (reset) 
+%             CurrentState <= WAIT;
+%         else 
+%             CurrentState <= NextState; 
+%     end 
+
+%     always @(CurrentState)
+%     begin
+%         // default is to stay in the same state
+%         NextState <= CurrentState;
+%         case ( CurrentState )
+%             WAIT :
+%                 if ( input_available )
+%                     NextState <= CALC;
+%             CALC :
+%                 if ( B_zero )
+%                     NextState <= DONE;
+%             DONE :
+%                 if ( result_taken )
+%                     NextState <= WAIT;
+%         endcase
+%     end 
+
+%     always @( * )
+%     begin
+%         // Default control signals
+%         A_sel <= A_SEL_X;
+%         A_ld <= 1'b0;
+%         B_sel <= B_SEL_X;
+%         B_ld <= 1'b0;
+%         idle <= 1'b0; 
+%         result_rdy = 1'b0;
+
+%         case ( CurrentState )
+%             WAIT :
+%                 begin
+%                     idle <= 1'b1; 
+%                     if(input_available)begin
+%                         A_sel <= A_SEL_IN;
+%                         B_sel <= B_SEL_IN;
+%                         A_ld <= 1'b1;   
+%                         B_ld <= 1'b1;
+%                     end
+%                 end
+%             CALC :
+%                 if ( A_lt_B )begin
+%                     A_sel <= A_SEL_B;
+%                     B_sel <= B_SEL_A;
+%                     A_ld <= 1'b1;
+%                     B_ld <= 1'b1;
+%                 end
+%                 else if ( !B_zero )begin
+%                     A_sel <= A_SEL_SUB;
+%                     A_ld <= 1'b1;
+%                 end
+%             DONE : 
+%                 result_rdy <= 1'b1;
+%         endcase
+%     end
+
+%     assign State = CurrentState;
+% endmodule
+% \end{verbatim}
+
+
+% Analisando o código passo a passo:
+
+% \begin{enumerate}
+%     \item O módulo "GCDcontrol" possui várias entradas e saídas, que são definidas na lista de portas do módulo.
+%     As entradas incluem \texttt{input\_available}, \texttt{clk}, \texttt{reset}, \texttt{B\_zero} e \texttt{A\_lt\_B}, enquanto as saídas incluem \texttt{idle}, \texttt{A\_ld}, \texttt{B\_sel}, \texttt{B\_ld}, \texttt{A\_sel}, \texttt{result\_rdy} e \texttt{State}.
+%     \item O módulo também define alguns parâmetros locais, como os nomes dos estados e as constantes para os seletores de multiplexadores.
+%     \item O módulo possui duas variáveis de estado, \texttt{CurrentState} e \texttt{NextState}, que são atualizadas em um bloco \texttt{always} sensível à borda de subida do sinal de clock ou de reset.
+%     \item Em seguida, há um bloco \texttt{always} sensível ao valor de \texttt{CurrentState}, que determina o próximo estado com base no estado atual. O próximo estado é atribuído à variável \texttt{NextState} usando uma estrutura \texttt{case} que verifica o valor de \texttt{CurrentState} e toma decisões com base nesse valor.
+%     \item O próximo bloco \texttt{always} é sensível a todas as mudanças de sinal e é usado para definir os sinais de controle com base no estado atual. Ele define os valores dos sinais \texttt{A\_sel}, \texttt{A\_ld}, \texttt{B\_sel}, \texttt{B\_ld}, \texttt{idle} e \texttt{result\_rdy} com base no valor de \texttt{CurrentState}. Novamente, uma estrutura \texttt{case} é usada para tomar decisões com base no estado atual.
+%     \item Por fim, o sinal \texttt{State} é atribuído ao valor de \texttt{CurrentState} usando a declaração \texttt{assign}.
+% \end{enumerate}
 
 Em resumo, esse módulo de controle implementa a lógica para controlar o fluxo de um algoritmo de cálculo do maior divisor comum. Ele define os estados do algoritmo e os sinais de controle necessários para executar as operações corretas em cada estado.
 
