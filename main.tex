@@ -35,7 +35,7 @@ a modelagem dos módulos de controle e datapath em Verilog,
 e a simulação e validação do sistema.
 
 \vspace{0.5cm}
-\noindent\textbf{PALAVRAS-CHAVE}: 
+\noindent\textbf{PALAVRAS-CHAVE}:
 GCD; Greatest Common Divisor; Hardware Description Language; Control; Datapath.
 
 \vspace{0.5cm}
@@ -52,7 +52,7 @@ the modeling of control and datapath modules in Verilog,
 and the system simulation and validation.
 
 \vspace{0.5cm}
-\noindent\textbf{KEYWORDS}: 
+\noindent\textbf{KEYWORDS}:
 GCD; Greatest Common Divisor; Hardware Description Language; Control; Datapath;
 
 \section{Introdução}
@@ -63,7 +63,7 @@ Além disso, o GCD é amplamente empregado em sistemas de controle em hardware, 
 
 Este estudo busca explorar não apenas a teoria por trás do GCD, mas também sua aplicação prática por meio de implementações computacionais. A pesquisa foca no desenvolvimento de simulações em software, abordando desde a modelagem até a implementação.
 
-\section{Fundamentação Teórica} 
+\section{Fundamentação Teórica}
 % Esta seção deve apresentar os conceitos teóricos fundamentais para o entendimento do GCD e sua relevância em computação. Aborde os princípios matemáticos e as aplicações típicas do GCD.
 
 \subsection{Conceitos Básicos de GCD}
@@ -127,8 +127,8 @@ Em resumo, o GCD é uma operação essencial em diversas áreas da computação,
 \section{Desenho de Arquitetura}
 % Nesta seção, descreva a arquitetura utilizada para a implementação do GCD em hardware. 
 % Inclua uma visão geral dos módulos e suas interações.
-Esta seção descreve a arquitetura do sistema, 
-incluindo a partição em módulos de controle e datapath, 
+Esta seção descreve a arquitetura do sistema,
+incluindo a partição em módulos de controle e datapath,
 e os diagramas de blocos que ilustram a interação entre os componentes.
 
 \subsection{Partição em Módulos}
@@ -136,26 +136,26 @@ e os diagramas de blocos que ilustram a interação entre os componentes.
 % Explicar o papel de cada módulo no sistema e como eles se comunicam. 
 % Pode incluir um diagrama de blocos para ilustrar.
 A arquitetura do sistema GCD foi organizada em dois módulos principais: Control e Datapath.
-Esta divisão permite uma clara separação de responsabilidades, permite 
-uma maior modularidade, 
+Esta divisão permite uma clara separação de responsabilidades, permite
+uma maior modularidade,
 facilita a implementação, manutenção e expansão do sistema.
 
 \subsubsection{Módulo de Controle}
-O módulo de Controle é responsável por gerenciar o fluxo de dados 
-entre os diferentes componentes do sistema e controlar as transições de estado. 
-Ele coordena as operações do Datapath com base nas condições de controle, 
-assegurando que as etapas do cálculo do GCD sejam executadas na ordem correta. 
+O módulo de Controle é responsável por gerenciar o fluxo de dados
+entre os diferentes componentes do sistema e controlar as transições de estado.
+Ele coordena as operações do Datapath com base nas condições de controle,
+assegurando que as etapas do cálculo do GCD sejam executadas na ordem correta.
 Este módulo inclui uma Máquina de Estados Finitos (FSM), a qual será discutida posteriormente,
-que determina a sequência de operações, incluindo a inicialização, 
+que determina a sequência de operações, incluindo a inicialização,
 execução do cálculo e término.
 
 \subsubsection{Módulo Datapath}
-O Datapath realiza as operações aritméticas necessárias para o cálculo do GCD, 
-como subtrações e comparações entre os valores de entrada. 
-Este módulo contém registradores, multiplexadores, e a unidade de subtração, 
-que juntos formam o núcleo da operação matemática. 
-A eficiência do Datapath é crítica para o desempenho global do sistema, 
-uma vez que ele executa as operações fundamentais repetidamente até 
+O Datapath realiza as operações aritméticas necessárias para o cálculo do GCD,
+como subtrações e comparações entre os valores de entrada.
+Este módulo contém registradores, multiplexadores, e a unidade de subtração,
+que juntos formam o núcleo da operação matemática.
+A eficiência do Datapath é crítica para o desempenho global do sistema,
+uma vez que ele executa as operações fundamentais repetidamente até
 que o resultado seja obtido.
 
 
@@ -163,11 +163,11 @@ que o resultado seja obtido.
 % Apresentar diagramas de blocos que representem a arquitetura do GCD, 
 % mostrando como os diferentes componentes se conectam e interagem. 
 % Explicar o fluxo de dados entre os módulos.
-O diagrama de bloco na Figura \ref{fig:top_level} 
-ilustra a arquitetura de nível superior do sistema GCD, 
-apresentando todas as entradas e saídas em um único bloco. 
-Este diagrama de blocos demonstra como os módulos de 
-Controle e Datapath estão interconectados e como o fluxo de dados é gerenciado entre eles. 
+O diagrama de bloco na Figura \ref{fig:top_level}
+ilustra a arquitetura de nível superior do sistema GCD,
+apresentando todas as entradas e saídas em um único bloco.
+Este diagrama de blocos demonstra como os módulos de
+Controle e Datapath estão interconectados e como o fluxo de dados é gerenciado entre eles.
 
 \begin{figure}[ht]
     \centering
@@ -177,8 +177,8 @@ Controle e Datapath estão interconectados e como o fluxo de dados é gerenciado
     \label{fig:top_level}
 \end{figure}
 
-O diagrama de blocos na Figura \ref{fig:diagram_block} ilustra como os componentes principais 
-do sistema GCD se interconectam. 
+O diagrama de blocos na Figura \ref{fig:diagram_block} ilustra como os componentes principais
+do sistema GCD se interconectam.
 
 \begin{figure}[ht]
     \centering
@@ -188,34 +188,34 @@ do sistema GCD se interconectam.
     \label{fig:diagram_block}
 \end{figure}
 
-O Datapath inclui os registradores, multiplexadores e a unidade de subtração, 
+O Datapath inclui os registradores, multiplexadores e a unidade de subtração,
 enquanto o Control FSM gerencia as operações com base nos sinais de controle.
 
 \clearpage
 \section{Desenvolvimento e Implementação}
 
-Os materiais e métodos utilizados no desenvolvimento da pesquisa 
+Os materiais e métodos utilizados no desenvolvimento da pesquisa
 incluem a descrição do algoritmo em C e
 a modelagem dos módulos de controle e datapath em Verilog.
 Além da simulação utilizando o ambiente Intel Quartus.
 
 \subsection{Descrição do Algoritmo em C}
 
-O código a seguir é uma implementação da função GCD (Greatest Common Divisor - Maior Divisor Comum). 
+O código a seguir é uma implementação da função GCD (Greatest Common Divisor - Maior Divisor Comum).
 Essa função calcula o maior divisor comum entre dois números inteiros.
 
-A função GCD recebe dois parâmetros: inA e inB, 
-que representam os dois números inteiros para os quais 
+A função GCD recebe dois parâmetros: inA e inB,
+que representam os dois números inteiros para os quais
 queremos calcular o maior divisor comum.
 
-O código utiliza um algoritmo chamado "algoritmo de Euclides" 
-para calcular o maior divisor comum. 
-O algoritmo de Euclides é baseado na observação de que 
-o maior divisor comum entre dois números não muda 
-se o menor número for subtraído do maior número repetidamente 
+O código utiliza um algoritmo chamado "algoritmo de Euclides"
+para calcular o maior divisor comum.
+O algoritmo de Euclides é baseado na observação de que
+o maior divisor comum entre dois números não muda
+se o menor número for subtraído do maior número repetidamente
 até que um dos números seja igual a zero.
 
-O algoritmo para cálculo do GCD pode ser implementado de diversas maneiras. 
+O algoritmo para cálculo do GCD pode ser implementado de diversas maneiras.
 Abaixo, apresentamos uma implementação em linguagem C:
 
 \begin{verbatim}
@@ -244,17 +244,17 @@ Aqui está uma explicação passo a passo do funcionamento do código:
 
 \begin{enumerate}
     \item O código declara algumas variáveis locais: \begin{verbatim}swap\end{verbatim}, \begin{verbatim}done\end{verbatim}, \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim}.
-    \begin{verbatim}swap\end{verbatim} é usada para trocar os valores de \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim} quando necessário.
-    \begin{verbatim}done\end{verbatim} é uma variável de controle que indica se o cálculo do maior divisor comum está concluído.
-    \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim} são inicializadas com os valores dos parâmetros \begin{verbatim}inA\end{verbatim} e \begin{verbatim}inB\end{verbatim}, respectivamente.
+          \begin{verbatim}swap\end{verbatim} é usada para trocar os valores de \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim} quando necessário.
+          \begin{verbatim}done\end{verbatim} é uma variável de controle que indica se o cálculo do maior divisor comum está concluído.
+          \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim} são inicializadas com os valores dos parâmetros \begin{verbatim}inA\end{verbatim} e \begin{verbatim}inB\end{verbatim}, respectivamente.
     \item O código entra em um loop \begin{verbatim}while\end{verbatim} que continua até que a variável \begin{verbatim}done\end{verbatim} seja igual a 1.
     \item O loop é usado para realizar as iterações necessárias para calcular o maior divisor comum.
     \item Dentro do loop, há uma estrutura \begin{verbatim}if-else\end{verbatim} que verifica três condições:
-    \begin{enumerate}
-        \item Se \begin{verbatim}A\end{verbatim} for menor que \begin{verbatim}B\end{verbatim}, os valores de \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim} são trocados usando a variável \begin{verbatim}swap\end{verbatim}. Isso garante que \begin{verbatim}A\end{verbatim} seja sempre o maior número.
-        \item Se \begin{verbatim}B\end{verbatim} for diferente de zero, \begin{verbatim}A\end{verbatim} é atualizado para \begin{verbatim}A - B\end{verbatim}. Isso realiza a subtração repetida até que um dos números seja igual a zero.
-        \item Se nenhuma das condições anteriores for verdadeira, significa que o cálculo do maior divisor comum está concluído e a variável \begin{verbatim}done\end{verbatim} é definida como 1 para sair do loop.
-    \end{enumerate}
+          \begin{enumerate}
+              \item Se \begin{verbatim}A\end{verbatim} for menor que \begin{verbatim}B\end{verbatim}, os valores de \begin{verbatim}A\end{verbatim} e \begin{verbatim}B\end{verbatim} são trocados usando a variável \begin{verbatim}swap\end{verbatim}. Isso garante que \begin{verbatim}A\end{verbatim} seja sempre o maior número.
+              \item Se \begin{verbatim}B\end{verbatim} for diferente de zero, \begin{verbatim}A\end{verbatim} é atualizado para \begin{verbatim}A - B\end{verbatim}. Isso realiza a subtração repetida até que um dos números seja igual a zero.
+              \item Se nenhuma das condições anteriores for verdadeira, significa que o cálculo do maior divisor comum está concluído e a variável \begin{verbatim}done\end{verbatim} é definida como 1 para sair do loop.
+          \end{enumerate}
     \item Após o loop, o código retorna o valor de \begin{verbatim}A\end{verbatim}, que representa o maior divisor comum entre os números \begin{verbatim}inA\end{verbatim} e \begin{verbatim}inB\end{verbatim}.
 \end{enumerate}
 
@@ -271,16 +271,16 @@ Por exemplo, se chamarmos a função GCD(24, 36), o algoritmo de Euclides será 
 
 \subsection{Modelagem em Verilog}
 
-A implementação do GCD em hardware envolve a 
-criação de módulos para o controle e o datapath. 
-O datapath lida com a movimentação e transformação dos dados, 
+A implementação do GCD em hardware envolve a
+criação de módulos para o controle e o datapath.
+O datapath lida com a movimentação e transformação dos dados,
 enquanto o módulo de controle gerencia as operações de controle.
 
 \subsubsection{Módulo Datapath}
 
-O código a seguir é um exemplo de um módulo em Verilog 
-que implementa o datapath para um algoritmo de cálculo do 
-Máximo Divisor Comum (GCD - Greatest Common Divisor). 
+O código a seguir é um exemplo de um módulo em Verilog
+que implementa o datapath para um algoritmo de cálculo do
+Máximo Divisor Comum (GCD - Greatest Common Divisor).
 
 \begin{verbatim}
 module GCDdatapath#( parameter W=16 )
@@ -349,8 +349,8 @@ endmodule
 
 A seguir, o funcionamento do código passo a passo:
 
-O módulo GCDdatapath recebe alguns parâmetros, 
-sendo o principal deles W, 
+O módulo GCDdatapath recebe alguns parâmetros,
+sendo o principal deles W,
 que define o tamanho dos operandos e do resultado em bits.
 
 O módulo possui várias entradas e saídas, incluindo:
@@ -667,23 +667,65 @@ A lógica de controle de sinais é implementada em um bloco \textit{always} que 
 
 \section{Simulações e Verificação}
 
-Para validar a implementação, foi realizada a simulação dos módulos utilizando o ambiente Intel QuestaSim. A Figura \ref{fig:simulacao} mostra a simulação do módulo GCD.
-
-\subsection{Simulação do módulo GCD}
-\begin{figure}[ht]
-    \centering
-    % \includegraphics[width=10cm,angle=0]{simulacao_gcd.png}
-    \caption{Simulação do módulo GCD}
-    \label{fig:simulacao}
-\end{figure}
-
-Os resultados da simulação confirmam que o design do GCD em hardware funciona conforme esperado. O módulo datapath executa corretamente as operações de subtração e troca, enquanto o módulo de controle gerencia os estados do sistema de maneira eficiente.
+% Descrever o ambiente de simulação utilizado, como o Intel QuestaSim. Explicar como os testes foram configurados e quais aspectos do sistema foram verificados.
+A simulação do módulo de controle GCD foi realizada
+utilizando o Software Quartus, um ambiente de
+desenvolvimento amplamente utilizado para projetos
+de FPGA. O objetivo dessa simulação é validar a
+implementação da Máquina de Estados Finitos (FSM)
+que controla o processo de cálculo do Greatest
+Common Divisor (GCD) e verificar se os sinais de
+controle e estado estão funcionando conforme o
+esperado.
 
 \subsection{Ambiente de Simulação}
-% Descrever o ambiente de simulação utilizado, como o Intel QuestaSim. Explicar como os testes foram configurados e quais aspectos do sistema foram verificados.
+O ambiente de simulação foi configurado no Quartus para testar o módulo \texttt{GCDcontrol}, responsável por coordenar as operações necessárias para calcular o GCD. A simulação foi conduzida com os seguintes sinais principais:
+\begin{itemize}
+    \item \textbf{clk}: Sinal de clock que sincroniza as operações do módulo.
+    \item \textbf{reset}: Sinal de reset utilizado para reinicializar a FSM ao estado inicial (\texttt{WAIT}).
+    \item \textbf{input\_available}: Sinal de controle que indica a disponibilidade de novos operandos de entrada.
+    \item \textbf{B\_zero}: Sinal de feedback do datapath indicando que o valor de B é zero, o que significa que o cálculo do GCD foi concluído.
+    \item \textbf{result\_taken}: Sinal de controle indicando que o resultado foi processado ou consumido.
+    \item \textbf{A\_lt\_B}: Sinal que indica se o valor de A é menor que B, usado para determinar a troca de valores.
+    \item \textbf{A\_sel, B\_sel, A\_ld, B\_ld}: Sinais de controle para a seleção e carregamento dos registradores no datapath.
+    \item \textbf{idle, result\_rdy, State}: Sinais de saída do módulo de controle indicando o estado atual da FSM, se o sistema está inativo (\texttt{idle}), e se o resultado está pronto para ser processado (\texttt{result\_rdy}).
+\end{itemize}
 
+A simulação foi conduzida utilizando o Software Quartus, que é amplamente utilizado para o desenvolvimento e verificação de projetos de FPGA. Os sinais mencionados foram monitorados ao longo do tempo para verificar se o módulo \texttt{GCDcontrol} opera conforme o esperado, garantindo a correta transição de estados e o comportamento desejado da FSM.
 \subsection{Resultados da Simulação}
 % Apresentar os resultados obtidos durante a simulação. Incluir gráficos ou capturas de tela que mostrem a operação do GCD. Discutir se os resultados atenderam às expectativas e os objetivos do projeto.
+
+A captura de tela fornecida (Figura \ref{simlacao_gcd}) mostra a forma de onda gerada durante a simulação no Quartus.
+
+\begin{figure}[ht]
+    \centering
+    \caption{Simulação do Módulo de Controle GCD}
+    \includegraphics[width=15cm,angle=0]{imgs/simulacao_gcd_quartus.png}
+    \\\textbf{Fonte:} Elaborado pelos autores
+    \label{simlacao_gcd}
+\end{figure}
+
+A análise dos resultados da simulação pode ser dividida em várias fases, conforme mostrado na forma de onda simulada. Cada fase representa um conjunto de operações e transições de estado na FSM:
+
+\subsubsection{Inicialização e Reset (0.0 µs - 1.0 µs)}
+
+No início da simulação, o sinal \texttt{reset} é ativado (\texttt{1}), o que força a FSM a reiniciar no estado \texttt{WAIT} (indicando por \texttt{State = 00}). Esse estado inicial é crucial, pois garante que o sistema comece em uma condição conhecida e estável. Durante esse período, o sinal \texttt{idle} também está ativado, indicando que o sistema está em um estado inativo, aguardando a disponibilidade de novos operandos para iniciar o cálculo.
+
+\subsubsection{Disponibilidade de Entradas e Transição para CALC (1.0 µs - 2.0 µs)}
+
+Após a fase de reset, o sinal \texttt{input\_available} é ativado (\texttt{1}), sinalizando que os operandos de entrada estão prontos para serem processados. Como resposta, a FSM transita do estado \texttt{WAIT} para o estado \texttt{CALC} (\texttt{State = 01}). Nesta fase, os sinais de controle \texttt{A\_sel} e \texttt{B\_sel} são configurados para selecionar os operandos corretos, e os sinais \texttt{A\_ld} e \texttt{B\_ld} são ativados (\texttt{1}), permitindo que os valores dos operandos sejam carregados nos registradores correspondentes no datapath. Esta transição é essencial para iniciar o processo de cálculo do GCD.
+
+\subsubsection{Cálculo e Subtrações (2.0 µs - 6.0 µs)}
+
+Durante o estado \texttt{CALC}, a FSM realiza as operações necessárias para o cálculo do GCD. Neste ponto, a FSM continua no estado \texttt{CALC}, alternando entre subtrações e comparações, conforme determinado pelo sinal \texttt{A\_lt\_B}, que indica se o valor de \texttt{A} é menor que \texttt{B}. As operações de subtração continuam até que o sinal \texttt{B\_zero} seja ativado, indicando que o valor de \texttt{B} chegou a zero, o que significa que o GCD foi encontrado. Durante essa fase, a FSM coordena as operações de subtração e troca de valores no datapath, utilizando os sinais \texttt{A\_sel} e \texttt{B\_sel} para garantir que as operações sejam realizadas corretamente.
+
+\subsubsection{Conclusão do Cálculo e Transição para DONE (6.0 µs - 7.0 µs)}
+
+Quando o sinal \texttt{B\_zero} é ativado, a FSM reconhece que o cálculo do GCD foi concluído. Nesse momento, a FSM transita do estado \texttt{CALC} para o estado \texttt{DONE} (\texttt{State = 10}). No estado \texttt{DONE}, o sinal \texttt{result\_rdy} é ativado, indicando que o resultado do GCD está pronto para ser consumido ou processado pela próxima etapa do sistema. Esta transição é crucial para finalizar o ciclo de cálculo e preparar o sistema para a próxima operação.
+
+\subsubsection{Consumo do Resultado e Retorno ao Estado WAIT (7.0 µs - 9.0 µs)}
+
+Após o cálculo ser concluído, o sinal \texttt{result\_taken} é ativado, indicando que o resultado foi processado ou retirado pelo sistema consumidor. Em resposta, a FSM retorna ao estado \texttt{WAIT}, reiniciando o ciclo de operação. O sistema agora está pronto para receber novos operandos e repetir o processo de cálculo do GCD. Essa fase final assegura que a FSM está pronta para iniciar novamente, mantendo a continuidade do fluxo de operações.
 
 \section{Otimizações e Melhorias Futuras}
 

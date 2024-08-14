@@ -177,11 +177,11 @@ INPUT main.toc
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecti1095.tfm
 INPUT c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm
 OUTPUT main.toc
+INPUT c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm
-INPUT c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT ./imgs/diagram_block_top_level.png
 INPUT ./imgs/diagram_block_top_level.png
 INPUT ./imgs/diagram_block_top_level.png
@@ -202,6 +202,12 @@ INPUT ./imgs/state_machine_GCD.png
 INPUT ./imgs/state_machine_GCD.png
 INPUT ./imgs/state_machine_GCD.png
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecbi1095.tfm
+INPUT ./imgs/simulacao_gcd_quartus.png
+INPUT ./imgs/simulacao_gcd_quartus.png
+INPUT ./imgs/simulacao_gcd_quartus.png
+INPUT ./imgs/simulacao_gcd_quartus.png
+INPUT ./imgs/simulacao_gcd_quartus.png
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcbx1095.tfm
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl

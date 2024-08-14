@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex main"] 1723588062 "main.aux" "main.bbl" "main" 1723588066 0
+["bibtex main"] 1723599555 "main.aux" "main.bbl" "main" 1723599559 0
   "./bibliografia.bib" 1723587988 3113 c524592679c4d2ac849256f93cc2b610 ""
   "c:/texlive/2023/texmf-dist/bibtex/bib/abntex2/abntex2-options.bib" 1697498087 5396 4eb260dac60f150ae608d45252853090 ""
   "c:/texlive/2023/texmf-dist/bibtex/bst/abntex2/abntex2-alf.bst" 1697498087 60064 0819ac8568f9a482510a46e3a8a6f605 ""
-  "main.aux" 1723588064 6436 30adedb9832af82279b798dec8d032f7 "pdflatex"
+  "main.aux" 1723599557 7110 53e34da864b15470fb68617d9522ac64 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1723588063 "c:/Users/higor/Desktop/circuitos/greatest-common-divisor-hardware/main.tex" "main.pdf" "main" 1723588066 0
-  "c:/Users/higor/Desktop/circuitos/greatest-common-divisor-hardware/main.tex" 1723588056 44131 32a37aab64ac07b9a4b0a6dddeaa539e ""
+["pdflatex"] 1723599556 "c:/Users/higor/Desktop/circuitos/greatest-common-divisor-hardware/main.tex" "main.pdf" "main" 1723599559 0
+  "c:/Users/higor/Desktop/circuitos/greatest-common-divisor-hardware/main.tex" 1723599551 49323 a640206c0839b10437e548d900486a76 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1697503606 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1697503606 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1697507332 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -24,6 +24,7 @@
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm" 1697506216 3584 3169d30142b88a27d4ab0e3468e963a2 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecti1095.tfm" 1697506216 3072 b73d2778cc3af44970de4de5e032d7f6 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ectt1095.tfm" 1697506216 1536 a988bfe554c1f79514bd46d13c3c64ce ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcbx1095.tfm" 1697506216 1536 0adca69c597a47fe7664bf81057bb53b ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1697506216 1536 02c06700a42be0f5a28664c7273f82e7 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1697499751 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1697499751 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -116,12 +117,13 @@
   "imgs/diagram_block_control_datapath.png" 1723587988 78763 7e27c31f8be79f67f841c65b321b751b ""
   "imgs/diagram_block_top_level.png" 1723587988 31341 a59a63810e5c63e92be0e3756c115c65 ""
   "imgs/logo_ifsp.png" 1723555907 4070 64c56fc9e5b78266e59be2ea043940ad ""
+  "imgs/simulacao_gcd_quartus.png" 1723599028 191968 6030584f99783c1d897a8712305b51e9 ""
   "imgs/state_machine_GCD.png" 1723563364 17143 68291b3783f4fb2381bc0b5d16465725 ""
-  "main.aux" 1723588064 6436 30adedb9832af82279b798dec8d032f7 "pdflatex"
-  "main.bbl" 1723588063 1586 ac9a0b6a15452a511ec69fdeb949fb93 "bibtex main"
-  "main.tex" 1723588056 44131 32a37aab64ac07b9a4b0a6dddeaa539e ""
-  "main.toc" 1723588064 2909 65cfc6c14f6fe62df615b4e2b3aa3b1c "pdflatex"
-  "preambulo.tex" 1723555907 1656 f5421a0941cc375ea62777ec6abffafc ""
+  "main.aux" 1723599557 7110 53e34da864b15470fb68617d9522ac64 "pdflatex"
+  "main.bbl" 1723599556 1586 ac9a0b6a15452a511ec69fdeb949fb93 "bibtex main"
+  "main.tex" 1723599551 49323 a640206c0839b10437e548d900486a76 ""
+  "main.toc" 1723599557 3408 dbec4f76131a6eaa83da6ef6d349aa7e "pdflatex"
+  "preambulo.tex" 1723597709 1656 f5421a0941cc375ea62777ec6abffafc ""
   (generated)
   "main.aux"
   "main.log"

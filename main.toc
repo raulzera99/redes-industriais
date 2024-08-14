@@ -24,14 +24,18 @@
 \contentsline {subsubsection}{\numberline {5.2.2}Lógica de Controle de Sinais}{21}{}%
 \contentsline {subsubsection}{\numberline {5.2.3}Controle de Sinais}{22}{}%
 \contentsline {section}{\numberline {6}Simulações e Verificação}{23}{}%
-\contentsline {subsection}{\numberline {6.1}Simulação do módulo GCD}{23}{}%
-\contentsline {subsection}{\numberline {6.2}Ambiente de Simulação}{23}{}%
-\contentsline {subsection}{\numberline {6.3}Resultados da Simulação}{23}{}%
-\contentsline {section}{\numberline {7}Otimizações e Melhorias Futuras}{23}{}%
-\contentsline {subsection}{\numberline {7.1}Otimização do Datapath}{23}{}%
-\contentsline {subsubsection}{\numberline {7.1.1}Implemetação do Pipelining}{23}{}%
-\contentsline {subsubsection}{\numberline {7.1.2}Benefícios do Pipelining}{24}{}%
-\contentsline {paragraph}{Conclusão :}{25}{}%
-\contentsline {subsection}{\numberline {7.2}Expansão do Design para Sistemas Maiores}{25}{}%
-\contentsline {section}{\numberline {8}Discussão sobre Integração com Sistemas Maiores e Otimização do Datapath}{25}{}%
-\contentsline {section}{\numberline {9}Conclusões}{25}{}%
+\contentsline {subsection}{\numberline {6.1}Ambiente de Simulação}{23}{}%
+\contentsline {subsection}{\numberline {6.2}Resultados da Simulação}{24}{}%
+\contentsline {subsubsection}{\numberline {6.2.1}Inicialização e Reset (0.0 µs - 1.0 µs)}{24}{}%
+\contentsline {subsubsection}{\numberline {6.2.2}Disponibilidade de Entradas e Transição para CALC (1.0 µs - 2.0 µs)}{24}{}%
+\contentsline {subsubsection}{\numberline {6.2.3}Cálculo e Subtrações (2.0 µs - 6.0 µs)}{25}{}%
+\contentsline {subsubsection}{\numberline {6.2.4}Conclusão do Cálculo e Transição para DONE (6.0 µs - 7.0 µs)}{25}{}%
+\contentsline {subsubsection}{\numberline {6.2.5}Consumo do Resultado e Retorno ao Estado WAIT (7.0 µs - 9.0 µs)}{25}{}%
+\contentsline {section}{\numberline {7}Otimizações e Melhorias Futuras}{25}{}%
+\contentsline {subsection}{\numberline {7.1}Otimização do Datapath}{25}{}%
+\contentsline {subsubsection}{\numberline {7.1.1}Implemetação do Pipelining}{25}{}%
+\contentsline {subsubsection}{\numberline {7.1.2}Benefícios do Pipelining}{26}{}%
+\contentsline {paragraph}{Conclusão :}{27}{}%
+\contentsline {subsection}{\numberline {7.2}Expansão do Design para Sistemas Maiores}{27}{}%
+\contentsline {section}{\numberline {8}Discussão sobre Integração com Sistemas Maiores e Otimização do Datapath}{27}{}%
+\contentsline {section}{\numberline {9}Conclusões}{27}{}%
