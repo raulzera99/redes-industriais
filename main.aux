@@ -4,85 +4,78 @@
 \catcode `"\active 
 \citation{abnt-url-package=url}
 \babel@aux{brazil}{}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introdução}{3}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2}Fundamentação Teórica}{3}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Conceitos Básicos de GCD}{3}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Algoritmo de Euclides}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Aplicações do GCD em Computação}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3}Desenho de Arquitetura}{5}{}\protected@file@percent }
-\citation{cse_taylor_michael}
-\citation{cse_taylor_michael}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Partição em Módulos}{6}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Módulo de Controle}{6}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Módulo Datapath}{6}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Diagramas de Blocos}{6}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Diagrama de Blocos do Sistema GCD}}{6}{}\protected@file@percent }
-\newlabel{fig:top_level}{{1}{6}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Diagrama de Blocos do Sistema GCD}}{7}{}\protected@file@percent }
-\newlabel{fig:diagram_block}{{2}{7}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Desenvolvimento e Implementação}{8}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Descrição do Algoritmo em C}{8}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Modelagem em Verilog}{9}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Módulo Datapath}{9}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Módulo Controle}{14}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Máquina de Estados Finitos (FSM)}{14}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Máquina de Estados Finitos para o GCD}}{14}{}\protected@file@percent }
-\newlabel{fig:fsm}{{3}{14}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Descrição dos Estados}{14}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Estado \textit  {WAIT} (Aguardando novos operandos)}{15}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Estado CALC (Calculando o GCD)}{15}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}Estado DONE (Esperando o consumidor receber o resultado)}{15}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Implementação da FSM}{15}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}Definição dos Estados e Sinais de Controle}{15}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}Lógica de Controle de Sinais}{16}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.3}Controle de Sinais}{17}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Simulações e Verificação}{17}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Ambiente de Simulação}{18}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Resultados da Simulação}{18}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Inicialização e Reset (0.0 µs - 1.0 µs)}{18}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Simulação do Módulo de Controle GCD}}{19}{}\protected@file@percent }
-\newlabel{simulacao_gcd}{{4}{19}{}{}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}Disponibilidade de Entradas e Transição para CALC (1.0 µs - 2.0 µs)}{19}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.3}Cálculo e Subtrações (2.0 µs - 6.0 µs)}{19}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.4}Conclusão do Cálculo e Transição para DONE (6.0 µs - 7.0 µs)}{19}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.5}Consumo do Resultado e Retorno ao Estado WAIT (7.0 µs - 9.0 µs)}{19}{}\protected@file@percent }
-\citation{Hennessy2017}
-\citation{Knuth1997}
-\citation{Patterson2013}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Otimizações e Melhorias Futuras}{20}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Otimização do Datapath}{20}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.1}Implemetação do Pipelining}{20}{}\protected@file@percent }
-\citation{Harris2010}
-\citation{Skiena2008}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.2}Benefícios do Pipelining}{21}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Conclusão :}{21}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Expansão do Design para Sistemas Maiores}{21}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}Discussão sobre Integração com Sistemas Maiores e Otimização do Datapath}{21}{}\protected@file@percent }
-\bibdata{abntex2-options,bibliografia.bib}
-\bibcite{Harris2010}{Harris e Harris 2007}
-\bibcite{Harris2010++EXPL}{Harris e Harris}
-\bibcite{Harris2010++IMPL}{HARRIS; HARRIS}
-\bibcite{Harris2010++YEAR}{2007}
-\bibcite{Hennessy2017}{Hennessy e Patterson 2017}
-\bibcite{Hennessy2017++EXPL}{Hennessy e Patterson}
-\bibcite{Hennessy2017++IMPL}{HENNESSY; PATTERSON}
-\bibcite{Hennessy2017++YEAR}{2017}
-\bibcite{Knuth1997}{Knuth 1997}
-\bibcite{Knuth1997++EXPL}{Knuth}
-\bibcite{Knuth1997++IMPL}{KNUTH}
-\bibcite{Knuth1997++YEAR}{1997}
-\bibcite{Patterson2013}{Patterson e Hennessy 2013}
-\bibcite{Patterson2013++EXPL}{Patterson e Hennessy}
-\bibcite{Patterson2013++IMPL}{PATTERSON; HENNESSY}
-\bibcite{Patterson2013++YEAR}{2013}
-\bibcite{Skiena2008}{Skiena 2008}
-\bibcite{Skiena2008++EXPL}{Skiena}
-\bibcite{Skiena2008++IMPL}{SKIENA}
-\bibcite{Skiena2008++YEAR}{2008}
-\bibcite{cse_taylor_michael}{Taylor 2019}
-\bibcite{cse_taylor_michael++EXPL}{Taylor}
-\bibcite{cse_taylor_michael++IMPL}{TAYLOR}
-\bibcite{cse_taylor_michael++YEAR}{2019}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introdução}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}DeviceNet}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Protocolo}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Histórico}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Funcionamento}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Meio Físico}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Empresas Vendedoras}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Vantagem}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Desvantagem}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Modbus}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Protocolo}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Histórico}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Funcionamento}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Meio Físico}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Empresas Vendedoras}{7}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Vantagem}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Desvantagem}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Profibus (PA/DP/FMS)}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Protocolo}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Histórico}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Funcionamento}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Meio Físico}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Empresas Vendedoras}{9}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Vantagem}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Desvantagem}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Profinet}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Protocolo}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Histórico}{10}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Funcionamento}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Meio Físico}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Empresas Vendedoras}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Vantagem}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7}Desvantagem}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}CAN (Controller Area Network)}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Protocolo}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Histórico}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Funcionamento}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Meio Físico}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Empresas Vendedoras}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Vantagem}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7}Desvantagem}{13}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}HART (Highway Addressable Remote Transducer)}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Protocolo}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Histórico}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Funcionamento}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Meio Físico}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.5}Empresas Vendedoras}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.6}Vantagem}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.7}Desvantagem}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}OPC/DCOM}{15}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Protocolo}{15}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Histórico}{15}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Funcionamento}{15}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}Meio Físico}{15}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Empresas Vendedoras}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6}Vantagem}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.7}Desvantagem}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}AS-i (Actuator Sensor Interface)}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Protocolo}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Histórico}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}Funcionamento}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.4}Meio Físico}{17}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.5}Empresas Vendedoras}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.6}Vantagem}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.7}Desvantagem}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10}Ethernet/IP}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.1}Protocolo}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.2}Histórico}{19}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.3}Funcionamento}{19}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.4}Meio Físico}{19}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.5}Empresas Vendedoras}{19}{}\protected@file@percent }
 \bibstyle{abntex2-alf}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusões}{22}{}\protected@file@percent }
-\gdef \@abspage@last{22}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.6}Vantagem}{20}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.7}Desvantagem}{20}{}\protected@file@percent }
+\gdef \@abspage@last{20}
